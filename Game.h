@@ -7,39 +7,38 @@
 #include "Ball.h"
 #include "Paddle.h"
 
-class Game {
-    public:
-        Game(unsigned short int windowSizeX, unsigned short int windowSizeY, unsigned short int paddleSize, bool isRightWall);     // constructor
-        bool Initialize();  // game initialization steps
-        void GameLoop();    // main loop to perform continuous looping while game is running
-        void ShutDownGame();    // shutting down game when exit key is pressed
+class Game
+{
+public:
+    Game(unsigned short int windowSizeX, unsigned short int windowSizeY, unsigned short int paddleSize, bool isRightWall);
+    bool Initialize();
+    void GameLoop();
+    void ShutDownGame();
 
-    private:
-        bool mIsRunning = true;    // boolean for indicating whether game should continue running
-                                   // have to initialize to true otherwise initializes with value of 0
+private:
+    bool mIsRunning = true;
 
-        void ProcessInput();    // first element of game loop - processes user inputs
-        void UpdateGame();      // second element of game loop - updates game variables
-        void GenerateOutput();  // third element of game loop - refreshes game outputs (graphics in this case)
+    void ProcessInput();
+    void UpdateGame();
+    void GenerateOutput();
 
-        SDL_Window* mWindow;    // pointer to window instance initialized with SDL
-        SDL_Renderer* mRenderer;    // pointer to SDL renderer object
-        unsigned short int _windowSizeX;
-        unsigned short int _windowSizeY;
-        bool _isRightWall;
-        unsigned short int _wallThickness;
-        long int _score;
-        bool _colorSwap;
+    SDL_Window *mWindow;
+    SDL_Renderer *mRenderer;
+    unsigned short int _windowSizeX;
+    unsigned short int _windowSizeY;
+    bool _isRightWall;
+    unsigned short int _wallThickness;
+    long int _score;
+    bool _colorSwap;
 
-        unsigned short int* getWallThickness();
+    unsigned short int *getWallThickness();
 
-        const Uint8* state;
+    const Uint8 *state;
 
-        Uint32 mTicksCount;     // var to save elapsed game time
+    Uint32 mTicksCount;
 
-        std::shared_ptr<Ball> ball1;       // declaring ball1 as a private member of game
-        std::shared_ptr<Paddle> paddle1;   // declaring paddle1 as written above
+    std::shared_ptr<Ball> ball1;
+    std::shared_ptr<Paddle> paddle1;
 };
 
-
-#endif //INC_26_PONG_CPP_GAME_H
+#endif
