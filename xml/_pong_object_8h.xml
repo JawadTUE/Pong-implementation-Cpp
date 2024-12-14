@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_pong_object_8h" kind="file" language="C++">
+    <compoundname>PongObject.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">random</includes>
+    <includes local="no">SDL2/SDL.h</includes>
+    <includedby refid="_ball_8h" local="yes">Ball.h</includedby>
+    <includedby refid="_paddle_8h" local="yes">Paddle.h</includedby>
+    <includedby refid="_pong_object_8cpp" local="yes">PongObject.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>PongObject.h</label>
+        <link refid="_pong_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="3">
+        <label>random</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Ball.cpp</label>
+        <link refid="_ball_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Ball.h</label>
+        <link refid="_ball_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="4">
+        <label>Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Paddle.cpp</label>
+        <link refid="_paddle_8cpp"/>
+      </node>
+      <node id="7">
+        <label>Paddle.h</label>
+        <link refid="_paddle_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>PongObject.cpp</label>
+        <link refid="_pong_object_8cpp"/>
+      </node>
+      <node id="1">
+        <label>PongObject.h</label>
+        <link refid="_pong_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_x_y_position" prot="public">XYPosition</innerclass>
+    <innerclass refid="class_pong_object" prot="public">PongObject</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INC_26_PONG_CPP_PONGOBJECT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INC_26_PONG_CPP_PONGOBJECT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL2/SDL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="struct_x_y_position" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_x_y_position" kindref="compound">XYPosition</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="11" refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_pong_object" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_pong_object" kindref="compound">PongObject</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17" refid="class_pong_object_1aa14dc04464bdbec58f203e647b74fd36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1aa14dc04464bdbec58f203e647b74fd36" kindref="member">PongObject</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;windowLimitX,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;windowLimitY,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;wallThickness)<sp/>:<sp/><ref refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" kindref="member">_thickness</ref>(wallThickness),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" kindref="member">_length</ref>(wallThickness),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" kindref="member">_position</ref>({</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(windowLimitX)<sp/>/<sp/>2,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(windowLimitY)<sp/>/<sp/>2}),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" kindref="member">_windowLimitX</ref>(windowLimitX),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" kindref="member">_windowLimitY</ref>(windowLimitY),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" kindref="member">_color</ref>({255,<sp/>255,<sp/>255})</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" kindref="member">_drawingObject</ref>.x<sp/>=<sp/><ref refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" kindref="member">_position</ref>.<ref refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" kindref="member">x</ref><sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" kindref="member">_thickness</ref>)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" kindref="member">_drawingObject</ref>.y<sp/>=<sp/><ref refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" kindref="member">_position</ref>.<ref refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" kindref="member">y</ref><sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" kindref="member">_length</ref>)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" kindref="member">_drawingObject</ref>.w<sp/>=<sp/><ref refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" kindref="member">_thickness</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" kindref="member">_drawingObject</ref>.h<sp/>=<sp/><ref refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" kindref="member">_length</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29" refid="class_pong_object_1ae8c5d206580bf520f896c0ea2e93af60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1ae8c5d206580bf520f896c0ea2e93af60" kindref="member">~PongObject</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" kindref="member">updateDrawingObject</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" kindref="member">switchColor</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_y_position" kindref="compound">XYPosition</ref><sp/>*<ref refid="class_pong_object_1abc996c2f1cef3ff6edcbf68ae8bb9bcc" kindref="member">getPosition</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect<sp/>*<ref refid="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" kindref="member">getDrawingObject</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;unsigned<sp/>short<sp/>int&gt;<sp/><ref refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" kindref="member">getColor</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="class_pong_object_1aa21847fdcfa1d66b9ff4f158a1627c74" kindref="member">getLength</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="class_pong_object_1a4bacb6adfc33add3bfe19a9cb6cb372d" kindref="member">getThickness</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" kindref="member">setPosition</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pong_object_1a6ea5eab6d057ec1fc361dc4ecf0043bc" kindref="member">setWindowLimits</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44" refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" kindref="member">_windowLimitX</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" kindref="member">_windowLimitY</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_x_y_position" kindref="compound">XYPosition</ref><sp/><ref refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" kindref="member">_position</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" kindref="member">_length</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" kindref="member">_thickness</ref>;</highlight></codeline>
+<codeline lineno="49" refid="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;unsigned<sp/>short<sp/>int&gt;<sp/><ref refid="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" kindref="member">_color</ref>;</highlight></codeline>
+<codeline lineno="50" refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect<sp/><ref refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" kindref="member">_drawingObject</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="PongObject.h"/>
+  </compounddef>
+</doxygen>

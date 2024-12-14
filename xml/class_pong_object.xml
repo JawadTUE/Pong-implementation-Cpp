@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_pong_object" kind="class" language="C++" prot="public">
+    <compoundname>PongObject</compoundname>
+    <derivedcompoundref refid="class_ball" prot="public" virt="non-virtual">Ball</derivedcompoundref>
+    <derivedcompoundref refid="class_paddle" prot="public" virt="non-virtual">Paddle</derivedcompoundref>
+    <includes refid="_pong_object_8h" local="no">PongObject.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" prot="protected" static="no" mutable="no">
+        <type>unsigned short int</type>
+        <definition>unsigned short int PongObject::_windowLimitX</definition>
+        <argsstring></argsstring>
+        <name>_windowLimitX</name>
+        <qualifiedname>PongObject::_windowLimitX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="44" column="24" bodyfile="PongObject.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_ball_1ad75211456f2db2abe067871360c8f795" compoundref="_ball_8cpp" startline="5" endline="11">Ball::ballOut</referencedby>
+        <referencedby refid="class_pong_object_1a6ea5eab6d057ec1fc361dc4ecf0043bc" compoundref="_pong_object_8cpp" startline="9" endline="13">setWindowLimits</referencedby>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">Ball::updatePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" prot="protected" static="no" mutable="no">
+        <type>unsigned short int</type>
+        <definition>unsigned short int PongObject::_windowLimitY</definition>
+        <argsstring></argsstring>
+        <name>_windowLimitY</name>
+        <qualifiedname>PongObject::_windowLimitY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="45" column="24" bodyfile="PongObject.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_ball_1ad75211456f2db2abe067871360c8f795" compoundref="_ball_8cpp" startline="5" endline="11">Ball::ballOut</referencedby>
+        <referencedby refid="class_paddle_1a695724f639844634ca2f421a2e858499" compoundref="_paddle_8cpp" startline="3" endline="21">Paddle::changePaddlePosition</referencedby>
+        <referencedby refid="class_paddle_1aec716565468e77008ea432043aa4e211" compoundref="_paddle_8h" startline="9" endline="14">Paddle::Paddle</referencedby>
+        <referencedby refid="class_pong_object_1a6ea5eab6d057ec1fc361dc4ecf0043bc" compoundref="_pong_object_8cpp" startline="9" endline="13">setWindowLimits</referencedby>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">Ball::updatePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_x_y_position" kindref="compound">XYPosition</ref></type>
+        <definition>XYPosition PongObject::_position</definition>
+        <argsstring></argsstring>
+        <name>_position</name>
+        <qualifiedname>PongObject::_position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="46" column="16" bodyfile="PongObject.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_ball_1ad75211456f2db2abe067871360c8f795" compoundref="_ball_8cpp" startline="5" endline="11">Ball::ballOut</referencedby>
+        <referencedby refid="class_paddle_1a695724f639844634ca2f421a2e858499" compoundref="_paddle_8cpp" startline="3" endline="21">Paddle::changePaddlePosition</referencedby>
+        <referencedby refid="class_pong_object_1abc996c2f1cef3ff6edcbf68ae8bb9bcc" compoundref="_pong_object_8cpp" startline="38" endline="38">getPosition</referencedby>
+        <referencedby refid="class_paddle_1aec716565468e77008ea432043aa4e211" compoundref="_paddle_8h" startline="9" endline="14">Paddle::Paddle</referencedby>
+        <referencedby refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" compoundref="_pong_object_8cpp" startline="3" endline="7">setPosition</referencedby>
+        <referencedby refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" compoundref="_pong_object_8cpp" startline="17" endline="23">updateDrawingObject</referencedby>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">Ball::updatePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" prot="protected" static="no" mutable="no">
+        <type>unsigned short int</type>
+        <definition>unsigned short int PongObject::_length</definition>
+        <argsstring></argsstring>
+        <name>_length</name>
+        <qualifiedname>PongObject::_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="47" column="24" bodyfile="PongObject.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_paddle_1a695724f639844634ca2f421a2e858499" compoundref="_paddle_8cpp" startline="3" endline="21">Paddle::changePaddlePosition</referencedby>
+        <referencedby refid="class_pong_object_1aa21847fdcfa1d66b9ff4f158a1627c74" compoundref="_pong_object_8cpp" startline="40" endline="40">getLength</referencedby>
+        <referencedby refid="class_paddle_1aec716565468e77008ea432043aa4e211" compoundref="_paddle_8h" startline="9" endline="14">Paddle::Paddle</referencedby>
+        <referencedby refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" compoundref="_pong_object_8cpp" startline="17" endline="23">updateDrawingObject</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" prot="protected" static="no" mutable="no">
+        <type>unsigned short int</type>
+        <definition>unsigned short int PongObject::_thickness</definition>
+        <argsstring></argsstring>
+        <name>_thickness</name>
+        <qualifiedname>PongObject::_thickness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="48" column="24" bodyfile="PongObject.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_pong_object_1a4bacb6adfc33add3bfe19a9cb6cb372d" compoundref="_pong_object_8cpp" startline="42" endline="42">getThickness</referencedby>
+        <referencedby refid="class_paddle_1aec716565468e77008ea432043aa4e211" compoundref="_paddle_8h" startline="9" endline="14">Paddle::Paddle</referencedby>
+        <referencedby refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" compoundref="_pong_object_8cpp" startline="17" endline="23">updateDrawingObject</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; unsigned short int &gt;</type>
+        <definition>std::vector&lt;unsigned short int&gt; PongObject::_color</definition>
+        <argsstring></argsstring>
+        <name>_color</name>
+        <qualifiedname>PongObject::_color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="49" column="17" bodyfile="PongObject.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" compoundref="_pong_object_8cpp" startline="36" endline="36">getColor</referencedby>
+        <referencedby refid="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" compoundref="_pong_object_8cpp" startline="25" endline="34">switchColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect PongObject::_drawingObject</definition>
+        <argsstring></argsstring>
+        <name>_drawingObject</name>
+        <qualifiedname>PongObject::_drawingObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="50" column="14" bodyfile="PongObject.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" compoundref="_pong_object_8cpp" startline="15" endline="15">getDrawingObject</referencedby>
+        <referencedby refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" compoundref="_pong_object_8cpp" startline="17" endline="23">updateDrawingObject</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pong_object_1aa14dc04464bdbec58f203e647b74fd36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PongObject::PongObject</definition>
+        <argsstring>(unsigned short int &amp;windowLimitX, unsigned short int &amp;windowLimitY, unsigned short int &amp;wallThickness)</argsstring>
+        <name>PongObject</name>
+        <qualifiedname>PongObject::PongObject</qualifiedname>
+        <param>
+          <type>unsigned short int &amp;</type>
+          <declname>windowLimitX</declname>
+        </param>
+        <param>
+          <type>unsigned short int &amp;</type>
+          <declname>windowLimitY</declname>
+        </param>
+        <param>
+          <type>unsigned short int &amp;</type>
+          <declname>wallThickness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="17" column="5" bodyfile="PongObject.h" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1ae8c5d206580bf520f896c0ea2e93af60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PongObject::~PongObject</definition>
+        <argsstring>()</argsstring>
+        <name>~PongObject</name>
+        <qualifiedname>PongObject::~PongObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="29" column="5" bodyfile="PongObject.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PongObject::updateDrawingObject</definition>
+        <argsstring>()</argsstring>
+        <name>updateDrawingObject</name>
+        <qualifiedname>PongObject::updateDrawingObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="31" column="10" bodyfile="PongObject.cpp" bodystart="17" bodyend="23"/>
+        <references refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" compoundref="_pong_object_8h" startline="50">_drawingObject</references>
+        <references refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" compoundref="_pong_object_8h" startline="47">_length</references>
+        <references refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" compoundref="_pong_object_8h" startline="46">_position</references>
+        <references refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" compoundref="_pong_object_8h" startline="48">_thickness</references>
+        <references refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" compoundref="_pong_object_8h" startline="10">XYPosition::x</references>
+        <references refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" compoundref="_pong_object_8h" startline="11">XYPosition::y</references>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PongObject::switchColor</definition>
+        <argsstring>()</argsstring>
+        <name>switchColor</name>
+        <qualifiedname>PongObject::switchColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="32" column="10" bodyfile="PongObject.cpp" bodystart="25" bodyend="34"/>
+        <references refid="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" compoundref="_pong_object_8h" startline="49">_color</references>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">Game::GenerateOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1abc996c2f1cef3ff6edcbf68ae8bb9bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_x_y_position" kindref="compound">XYPosition</ref> *</type>
+        <definition>XYPosition * PongObject::getPosition</definition>
+        <argsstring>()</argsstring>
+        <name>getPosition</name>
+        <qualifiedname>PongObject::getPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="34" column="16" bodyfile="PongObject.cpp" bodystart="38" bodyend="38"/>
+        <references refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" compoundref="_pong_object_8h" startline="46">_position</references>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect * PongObject::getDrawingObject</definition>
+        <argsstring>()</argsstring>
+        <name>getDrawingObject</name>
+        <qualifiedname>PongObject::getDrawingObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="35" column="14" bodyfile="PongObject.cpp" bodystart="15" bodyend="15"/>
+        <references refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" compoundref="_pong_object_8h" startline="50">_drawingObject</references>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">Game::GenerateOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; unsigned short int &gt;</type>
+        <definition>std::vector&lt; unsigned short int &gt; PongObject::getColor</definition>
+        <argsstring>()</argsstring>
+        <name>getColor</name>
+        <qualifiedname>PongObject::getColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="36" column="17" bodyfile="PongObject.cpp" bodystart="36" bodyend="36"/>
+        <references refid="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" compoundref="_pong_object_8h" startline="49">_color</references>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">Game::GenerateOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1aa21847fdcfa1d66b9ff4f158a1627c74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short int *</type>
+        <definition>unsigned short int * PongObject::getLength</definition>
+        <argsstring>()</argsstring>
+        <name>getLength</name>
+        <qualifiedname>PongObject::getLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="38" column="24" bodyfile="PongObject.cpp" bodystart="40" bodyend="40"/>
+        <references refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" compoundref="_pong_object_8h" startline="47">_length</references>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1a4bacb6adfc33add3bfe19a9cb6cb372d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short int *</type>
+        <definition>unsigned short int * PongObject::getThickness</definition>
+        <argsstring>()</argsstring>
+        <name>getThickness</name>
+        <qualifiedname>PongObject::getThickness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="39" column="24" bodyfile="PongObject.cpp" bodystart="42" bodyend="42"/>
+        <references refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" compoundref="_pong_object_8h" startline="48">_thickness</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1ae99288d4ba0092aa823adf5451937097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PongObject::setPosition</definition>
+        <argsstring>(float x, float y)</argsstring>
+        <name>setPosition</name>
+        <qualifiedname>PongObject::setPosition</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="40" column="10" bodyfile="PongObject.cpp" bodystart="3" bodyend="7"/>
+        <references refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" compoundref="_pong_object_8h" startline="46">_position</references>
+        <references refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" compoundref="_pong_object_8h" startline="10">XYPosition::x</references>
+        <references refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" compoundref="_pong_object_8h" startline="11">XYPosition::y</references>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pong_object_1a6ea5eab6d057ec1fc361dc4ecf0043bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PongObject::setWindowLimits</definition>
+        <argsstring>(unsigned short int, unsigned short int)</argsstring>
+        <name>setWindowLimits</name>
+        <qualifiedname>PongObject::setWindowLimits</qualifiedname>
+        <param>
+          <type>unsigned short int</type>
+          <defname>windowLimitX</defname>
+        </param>
+        <param>
+          <type>unsigned short int</type>
+          <defname>windowLimitY</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="41" column="10" bodyfile="PongObject.cpp" bodystart="9" bodyend="13"/>
+        <references refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" compoundref="_pong_object_8h" startline="44">_windowLimitX</references>
+        <references refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" compoundref="_pong_object_8h" startline="45">_windowLimitY</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Ball</label>
+        <link refid="class_ball"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Paddle</label>
+        <link refid="class_paddle"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PongObject</label>
+        <link refid="class_pong_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PongObject</label>
+        <link refid="class_pong_object"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_length</edgelabel>
+          <edgelabel>_thickness</edgelabel>
+          <edgelabel>_windowLimitX</edgelabel>
+          <edgelabel>_windowLimitY</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_position</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_color</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>_drawingObject</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SDL_Rect</label>
+      </node>
+      <node id="7">
+        <label>T</label>
+      </node>
+      <node id="3">
+        <label>XYPosition</label>
+        <link refid="struct_x_y_position"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>float</label>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; unsigned short int &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; unsigned short int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>unsigned short int</label>
+      </node>
+    </collaborationgraph>
+    <location file="PongObject.h" line="14" column="1" bodyfile="PongObject.h" bodystart="15" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" prot="protected" virt="non-virtual"><scope>PongObject</scope><name>_color</name></member>
+      <member refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" prot="protected" virt="non-virtual"><scope>PongObject</scope><name>_drawingObject</name></member>
+      <member refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" prot="protected" virt="non-virtual"><scope>PongObject</scope><name>_length</name></member>
+      <member refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" prot="protected" virt="non-virtual"><scope>PongObject</scope><name>_position</name></member>
+      <member refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" prot="protected" virt="non-virtual"><scope>PongObject</scope><name>_thickness</name></member>
+      <member refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" prot="protected" virt="non-virtual"><scope>PongObject</scope><name>_windowLimitX</name></member>
+      <member refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" prot="protected" virt="non-virtual"><scope>PongObject</scope><name>_windowLimitY</name></member>
+      <member refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" prot="public" virt="non-virtual"><scope>PongObject</scope><name>getColor</name></member>
+      <member refid="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" prot="public" virt="non-virtual"><scope>PongObject</scope><name>getDrawingObject</name></member>
+      <member refid="class_pong_object_1aa21847fdcfa1d66b9ff4f158a1627c74" prot="public" virt="non-virtual"><scope>PongObject</scope><name>getLength</name></member>
+      <member refid="class_pong_object_1abc996c2f1cef3ff6edcbf68ae8bb9bcc" prot="public" virt="non-virtual"><scope>PongObject</scope><name>getPosition</name></member>
+      <member refid="class_pong_object_1a4bacb6adfc33add3bfe19a9cb6cb372d" prot="public" virt="non-virtual"><scope>PongObject</scope><name>getThickness</name></member>
+      <member refid="class_pong_object_1aa14dc04464bdbec58f203e647b74fd36" prot="public" virt="non-virtual"><scope>PongObject</scope><name>PongObject</name></member>
+      <member refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" prot="public" virt="non-virtual"><scope>PongObject</scope><name>setPosition</name></member>
+      <member refid="class_pong_object_1a6ea5eab6d057ec1fc361dc4ecf0043bc" prot="public" virt="non-virtual"><scope>PongObject</scope><name>setWindowLimits</name></member>
+      <member refid="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" prot="public" virt="non-virtual"><scope>PongObject</scope><name>switchColor</name></member>
+      <member refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" prot="public" virt="non-virtual"><scope>PongObject</scope><name>updateDrawingObject</name></member>
+      <member refid="class_pong_object_1ae8c5d206580bf520f896c0ea2e93af60" prot="public" virt="non-virtual"><scope>PongObject</scope><name>~PongObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

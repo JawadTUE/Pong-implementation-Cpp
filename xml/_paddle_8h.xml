@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_paddle_8h" kind="file" language="C++">
+    <compoundname>Paddle.h</compoundname>
+    <includes refid="_pong_object_8h" local="yes">PongObject.h</includes>
+    <includedby refid="_game_8h" local="yes">Game.h</includedby>
+    <includedby refid="_paddle_8cpp" local="yes">Paddle.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Paddle.h</label>
+        <link refid="_paddle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PongObject.h</label>
+        <link refid="_pong_object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="4">
+        <label>random</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Paddle.cpp</label>
+        <link refid="_paddle_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Paddle.h</label>
+        <link refid="_paddle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_paddle" prot="public">Paddle</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INC_26_PONG_CPP_PADDLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INC_26_PONG_CPP_PADDLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_pong_object_8h" kindref="compound">PongObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_paddle" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_paddle" kindref="compound">Paddle</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_pong_object" kindref="compound">PongObject</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9" refid="class_paddle_1aec716565468e77008ea432043aa4e211" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_paddle_1aec716565468e77008ea432043aa4e211" kindref="member">Paddle</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;windowLimitX,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;windowLimitY,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;wallThickness,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>movingSpeed,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length)<sp/>:<sp/><ref refid="class_pong_object" kindref="compound">PongObject</ref>(windowLimitX,<sp/>windowLimitY,<sp/>wallThickness),<sp/><ref refid="class_paddle_1aa1decb5e97f47790efa8cd67226ebabc" kindref="member">_mPaddleMovingSpeed</ref>(movingSpeed),<sp/><ref refid="class_paddle_1a19ba8eccb935d72d7fb6f116da4b55b5" kindref="member">_mPaddleDirection</ref>(0)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" kindref="member">_length</ref><sp/>=<sp/>length;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" kindref="member">_position</ref>.<ref refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" kindref="member">x</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" kindref="member">_thickness</ref>)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" kindref="member">_position</ref>.<ref refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" kindref="member">y</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" kindref="member">_windowLimitY</ref>)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paddle_1a695724f639844634ca2f421a2e858499" kindref="member">changePaddlePosition</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="class_paddle_1ad646734121d992e82335d51b6b27c8b3" kindref="member">getPaddleDirection</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*<ref refid="class_paddle_1a8ca1e1c426d48134b921cada983c4a6c" kindref="member">getPaddleMovingSpeed</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23" refid="class_paddle_1a19ba8eccb935d72d7fb6f116da4b55b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_paddle_1a19ba8eccb935d72d7fb6f116da4b55b5" kindref="member">_mPaddleDirection</ref>;</highlight></codeline>
+<codeline lineno="24" refid="class_paddle_1aa1decb5e97f47790efa8cd67226ebabc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_paddle_1aa1decb5e97f47790efa8cd67226ebabc" kindref="member">_mPaddleMovingSpeed</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Paddle.h"/>
+  </compounddef>
+</doxygen>

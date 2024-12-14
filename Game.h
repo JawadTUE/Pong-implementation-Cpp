@@ -6,6 +6,7 @@
 #include <thread>
 #include "Ball.h"
 #include "Paddle.h"
+#include <memory>
 
 class Game
 {

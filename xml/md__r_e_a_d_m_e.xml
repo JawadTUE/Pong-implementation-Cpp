@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md__r_e_a_d_m_e</compoundname>
+    <title>README</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="1">Pong game implementation in C++</heading>
+</para>
+<para><heading level="2">1. <ref refid="class_game" kindref="compound">Game</ref> overview</heading>
+</para>
+<para>The app implements a simple game of <computeroutput>Pong</computeroutput>. At startup, the app initializes a window that has a paddle on the right side, a ball in the middle and three walls around. The paddle can be controlled by keyboard presses on <computeroutput>W(up)</computeroutput> and <computeroutput>S(down)</computeroutput>. The ball automatically starts travelling and when it hits a wall or the paddle, it bounces and accelerates.</para>
+<para>In the meantime, the app keeps track of the player&apos;s score and sends related messages via the standard text output device (the terminal):<itemizedlist>
+<listitem><para>1 point is awarded for each bounce of the ball (wall or paddle), and</para>
+</listitem><listitem><para>10 points are deducted if the ball leaves the game area (&quot;goes out&quot; of the window on the paddle&apos;s side).</para>
+</listitem></itemizedlist>
+</para>
+<para>If the ball leaves the game area, it is placed back in the center and its color is changed. The app pauses for 2 seconds, then the game restarts, with the ball&apos;s travelling speed reset to the initial speed.</para>
+<para>The game can be played infinitely, with the app keeping track of the player&apos;s score in the terminal. The app can be terminated by pressing the <computeroutput>Esc</computeroutput> key or closing the window.</para>
+<para><heading level="2">2. Installation instructions</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>Depending on your system, install a C++ compiler (macOS has g++ built-in with XCode Command Line Developer Tools, or alternatively you can use clang++ etc.) <ulink url="https://gcc.gnu.org">GCC</ulink> <ndash/> <ulink url="https://clang.llvm.org/get_started.html">Clang</ulink></para>
+</listitem><listitem><para>You must have CMake and Make installed to be able to build the app from source: <ulink url="https://cmake.org/install/">Cmake install</ulink> <ndash/> <ulink url="https://www.gnu.org/software/make/">GNU page for Make</ulink></para>
+</listitem><listitem><para>please install <computeroutput>git</computeroutput> if you don&apos;t have it (macOS has it by default): <ulink url="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git installation</ulink></para>
+</listitem><listitem><para>You have to have SDL 2.0 installed (see <ulink url="https://libsdl.org/download-2.0.php">SDL&apos;s download page</ulink>) for source code or binaries for different OSes. Place the SDL 2.0 files somewhere where your compiler looks for third-party libraries</para>
+</listitem><listitem><para>The app folder is set up to use <computeroutput>CMake</computeroutput> and <computeroutput>make</computeroutput>; you can compile the app with via the following steps:<itemizedlist>
+<listitem><para>open a new <computeroutput>terminal</computeroutput></para>
+</listitem><listitem><para><computeroutput>cd</computeroutput> into the folder where you would like to clone the repository</para>
+</listitem><listitem><para>run <computeroutput>git clone <ulink url="https://github.com/tamasdinh/Pong-implementation-Cpp">https://github.com/tamasdinh/Pong-implementation-Cpp</ulink></computeroutput> - this will download the whole project folder for you from my GitHub repository</para>
+</listitem><listitem><para><computeroutput>cd</computeroutput> to the <computeroutput>Pong-implementation-Cpp</computeroutput> directory</para>
+</listitem><listitem><para>run <computeroutput>mkdir build</computeroutput> (or whatever command creates a directory in your OS)</para>
+</listitem><listitem><para>run <computeroutput>cmake ..</computeroutput></para>
+</listitem><listitem><para>run <computeroutput>make</computeroutput></para>
+</listitem><listitem><para>the executable binary file will appear in the <computeroutput>build</computeroutput> directory (this is your current working directory). You can run the app by running <computeroutput>./26_Pong_Cpp</computeroutput> in the terminal.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Play in the game window and read the messages in the terminal! See if you can beat yourself - as the old samurai saying goes: <computeroutput>True victory is victory over the self.</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="2">3. App structure and implementation logic</heading>
+</para>
+<para>The app is implemented in an object-oriented fashion, with operation factored into separate classes with an efficient inheritance structure.</para>
+<para><itemizedlist>
+<listitem><para><bold>class <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput> (<ref refid="_pong_object_8h" kindref="compound">PongObject.h</ref>):</bold><itemizedlist>
+<listitem><para>Base class for all moving objects (<computeroutput><ref refid="class_paddle" kindref="compound">Paddle</ref></computeroutput> and <computeroutput><ref refid="class_ball" kindref="compound">Ball</ref></computeroutput>) in the game.</para>
+</listitem><listitem><para>Implements a <computeroutput>base constructor</computeroutput>.</para>
+</listitem><listitem><para>Encapsulates data members for <computeroutput>windowLimit (x and y)</computeroutput>, <computeroutput>position (x and y)</computeroutput>, <computeroutput>length</computeroutput>, <computeroutput>thickness</computeroutput>, <computeroutput>color</computeroutput> and <computeroutput>drawingObject</computeroutput>.</para>
+</listitem><listitem><para>Declares and defines suitable <computeroutput>getter</computeroutput> and <computeroutput>setter</computeroutput> functions for data members.</para>
+</listitem><listitem><para>Implements <computeroutput>updateDrawingObject</computeroutput> and <computeroutput>switchColor</computeroutput> as common methods for <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput> objects.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>class <computeroutput><ref refid="class_paddle" kindref="compound">Paddle</ref></computeroutput> (<ref refid="_paddle_8h" kindref="compound">Paddle.h</ref>):</bold><itemizedlist>
+<listitem><para>Child class of <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput></para>
+</listitem><listitem><para>Declares data members unique to <computeroutput><ref refid="class_paddle" kindref="compound">Paddle</ref></computeroutput>: <computeroutput>paddleDirection</computeroutput> and <computeroutput>paddleMovingSpeed</computeroutput> and declares and defines appropriate <computeroutput>getter</computeroutput> functions for them (setters not needed)</para>
+</listitem><listitem><para>Overrides <computeroutput>base constructor</computeroutput> in <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput> to add initialization for data members unique to <computeroutput><ref refid="class_paddle" kindref="compound">Paddle</ref></computeroutput></para>
+</listitem><listitem><para>Declares and defines <computeroutput>changePaddlePosition</computeroutput> method (caters for handling paddle movements based on user input)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>class <computeroutput><ref refid="class_ball" kindref="compound">Ball</ref></computeroutput> (<ref refid="_ball_8h" kindref="compound">Ball.h</ref>):</bold><itemizedlist>
+<listitem><para>Child class of <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput></para>
+</listitem><listitem><para>Declares data members unique to <computeroutput><ref refid="class_ball" kindref="compound">Ball</ref></computeroutput>: <computeroutput>startVelocity (x and y)</computeroutput>, <computeroutput>velocity (x and y)</computeroutput>, <computeroutput>acceleration</computeroutput> and <computeroutput>hasBounced</computeroutput> (getters and setters not needed as they are catered for in <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput>)</para>
+</listitem><listitem><para>Overrides <computeroutput>base constructor</computeroutput> in <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput> to add initialization for data members unique to <computeroutput><ref refid="class_ball" kindref="compound">Ball</ref></computeroutput></para>
+</listitem><listitem><para>Declares and defines <computeroutput>updatePosition</computeroutput> method (caters for handling ball movements, including bouncing) as well as helper methods <computeroutput>hasBounced</computeroutput> (getter for <computeroutput>hasBounced</computeroutput> data member), <computeroutput>ballOut</computeroutput> (signals if ball left game area) and <computeroutput>resetVelocity</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>class <computeroutput><ref refid="class_game" kindref="compound">Game</ref></computeroutput> (<ref refid="_game_8h" kindref="compound">Game.h</ref>):</bold><itemizedlist>
+<listitem><para>Encapsulates the whole logic for the game</para>
+</listitem><listitem><para><emphasis>public methods:</emphasis><itemizedlist>
+<listitem><para><computeroutput>Initialize()</computeroutput>: Initializes <computeroutput>SDL</computeroutput> graphic objects.</para>
+</listitem><listitem><para><computeroutput>GameLoop()</computeroutput>: executes private member functions <computeroutput>ProcessInput()</computeroutput>, <computeroutput>UpdateGame()</computeroutput> and <computeroutput>GenerateOutput()</computeroutput> in a while loop that runs until the <computeroutput>mIsRunning</computeroutput> data member becomes <computeroutput>false</computeroutput>.</para>
+</listitem><listitem><para><computeroutput>ShutDownGame()</computeroutput>: destructs previously created <computeroutput>SDL</computeroutput> objects and terminates <computeroutput>SDL</computeroutput> session.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>The <computeroutput><ref refid="class_game" kindref="compound">Game</ref> Loop</computeroutput> is implemented via the following methods:<itemizedlist>
+<listitem><para><computeroutput>ProcessInput()</computeroutput>:<itemizedlist>
+<listitem><para>Responsible for handling user inputs during the game.</para>
+</listitem><listitem><para>Utilizes <computeroutput>SDL_event</computeroutput> and <computeroutput>SDL_GetKeyBoardState()</computeroutput> to continuously query for user inputs on the keyboard. Saves keyboard state to data member <computeroutput>state</computeroutput> and sets <computeroutput>mIsRunning</computeroutput> to <computeroutput>false</computeroutput> if the <computeroutput>Esc</computeroutput> key is pressed, thereby halting the <computeroutput>game loop</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput>UpdateGame()</computeroutput>:<itemizedlist>
+<listitem><para>Responsible for updating the game state in every iteration of the <computeroutput>game loop</computeroutput>.</para>
+</listitem><listitem><para>Calculates <computeroutput>deltaTime</computeroutput> - time passed since last loop, and also caps it so that if game pauses no &quot;jumps&quot; occur</para>
+</listitem><listitem><para>updates the paddle&apos;s position by envoking <computeroutput><ref refid="class_paddle_1a695724f639844634ca2f421a2e858499" kindref="member">Paddle::changePaddlePosition()</ref></computeroutput>, which takes inputs for the keyboard state corresponding to the <computeroutput>&quot;Up&quot; key (W)</computeroutput> and the <computeroutput>&quot;Down&quot; key (S)</computeroutput> and <computeroutput>deltaTime</computeroutput></para>
+</listitem><listitem><para>updates the ball&apos;s position by envoking <computeroutput><ref refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" kindref="member">Ball::updatePosition()</ref></computeroutput>, which takes <computeroutput>deltaTime</computeroutput> as input as well as relevant other parameters</para>
+</listitem><listitem><para>checks whether the ball has left the game area - if so, deducts score and resets ball state to the center (and also indicates via a data member that the ball&apos;s color has to be changed)</para>
+</listitem><listitem><para>checks whether the ball has bounced - if so, awards a point and outputs message to terminal</para>
+</listitem><listitem><para>updates the <computeroutput>SDL</computeroutput> drawing objects in <computeroutput><ref refid="class_paddle" kindref="compound">Paddle</ref></computeroutput> and <computeroutput><ref refid="class_ball" kindref="compound">Ball</ref></computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><computeroutput>GenerateOutput()</computeroutput>:<itemizedlist>
+<listitem><para>Responsible for updating graphics, based on the updated game state.</para>
+</listitem><listitem><para>Redraws background, walls, paddle and ball in each iteration of the <computeroutput>game loop</computeroutput>.</para>
+</listitem><listitem><para>If ball recoloring need was indicated, switches ball color via <computeroutput><ref refid="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" kindref="member">Ball::switchColor()</ref></computeroutput> (inherited from <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput>) and makes the app pause for 2 seconds.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="2">4. Methodological notes</heading>
+</para>
+<para>___NOTE:___ I made 2 small modifications to the code, in order for it to be able to run on a Linux remote VM:</para>
+<para><itemizedlist>
+<listitem><para>I changed renderer options from SDL_RENDERER_ACCELERATED to 0 (system chooses) as the Linux remote machine &gt;came back with &quot;Cannot find suitable renderer&quot; error</para>
+</listitem><listitem><para>I commented out the line in <computeroutput><ref refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" kindref="member">Game::UpdateGame()</ref></computeroutput> in which I am guarding against too fast execution compared to the frame rate of the machine.</para>
+</listitem><listitem><para>The two changes above enabled the remote Linux VM to run the program, albeit with a little lagging</para>
+</listitem><listitem><para>___<computeroutput>Loops, function, I/O</computeroutput>:___<itemizedlist>
+<listitem><para>The app utilizes a main while loop for the implementation of the <computeroutput>game loop</computeroutput> and certainly there are a number of <computeroutput>if</computeroutput> statements governing the logic of the app.</para>
+</listitem><listitem><para>User input (keystrokes during gameplay) is handled via <computeroutput><ref refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" kindref="member">Game::ProcessInput()</ref></computeroutput> as part of the main <computeroutput>game loop</computeroutput>.</para>
+</listitem><listitem><para>The app does not read in data from any persistent data sources and only outputs non-persistent graphics and text via the output device (main display).</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>___<computeroutput>Object-oriented Programming (OOP)</computeroutput>:___<itemizedlist>
+<listitem><para>All operations are encapsulated in classes and corresponding member functions; state is monitored via data members of the respective classes.</para>
+</listitem><listitem><para>I used inheritance between the <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput> base class and its specific children <computeroutput><ref refid="class_paddle" kindref="compound">Paddle</ref></computeroutput> and <computeroutput><ref refid="class_ball" kindref="compound">Ball</ref></computeroutput>, as described above in ___2. App structure and implementation logic___</para>
+</listitem><listitem><para><computeroutput>Base constructor</computeroutput> is overriden in both child classes as appropriate; I didn&apos;t see a need for any further application of polymorphism (as this is a game - not a user program -, there is no user who would want to e.g. call a function differently than I did in the implementation). Also, <computeroutput><ref refid="class_pong_object" kindref="compound">PongObject</ref></computeroutput> is not implemented as an <computeroutput>abstract class</computeroutput> as most of the functionality that it provides can be shared (inherited) to its child classes. As such, I didn&apos;t use virtual functions or templates.</para>
+</listitem><listitem><para>Member initialization lists are utilized as fully as possible (a number of data members could not have been initialized via initialization lists)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>___<computeroutput>Memory management</computeroutput>:___<itemizedlist>
+<listitem><para><computeroutput><ref refid="class_game" kindref="compound">Game</ref></computeroutput> is envoked on the stack in <computeroutput>main</computeroutput>, so I decided that no destructor was needed.</para>
+</listitem><listitem><para><computeroutput><ref refid="class_ball" kindref="compound">Ball</ref></computeroutput> and <computeroutput><ref refid="class_paddle" kindref="compound">Paddle</ref></computeroutput> are initialized on the heap, and <computeroutput>shared_ptr</computeroutput>s pointing to their memory addresses are included as members in the <computeroutput><ref refid="class_game" kindref="compound">Game</ref></computeroutput> class. As such, no destructors for these classes were deemed necessary as the <computeroutput>shared_ptr</computeroutput>s go out of scope in <computeroutput><ref refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main()</ref></computeroutput> when the app finished running and with that, free up the memory allocated for <computeroutput><ref refid="class_ball" kindref="compound">Ball</ref></computeroutput> and <computeroutput><ref refid="class_paddle" kindref="compound">Paddle</ref></computeroutput> objects.</para>
+</listitem><listitem><para><computeroutput>SDL</computeroutput> objects that are created, are destructed with corresponding <computeroutput>SDL</computeroutput> methods.</para>
+</listitem><listitem><para>I utilized references to variables and data members everywhere possible to avoid unnecessarily copying variables between functions.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>___<computeroutput>Concurrency</computeroutput>:___<itemizedlist>
+<listitem><para><computeroutput>Concurrency</computeroutput> was not used explicitly in the program. (SDL uses multithreading within its own methods.) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;h1&gt;Pong<sp/>game<sp/>implementation<sp/>in<sp/>C++&lt;/h1&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;1.<sp/>Game<sp/>overview&lt;/h2&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>app<sp/>implements<sp/>a<sp/>simple<sp/>game<sp/>of<sp/>```Pong```.<sp/>At<sp/>startup,<sp/>the<sp/>app<sp/>initializes</highlight></codeline>
+<codeline><highlight class="normal">a<sp/>window<sp/>that<sp/>has<sp/>a<sp/>paddle<sp/>on<sp/>the<sp/>right<sp/>side,<sp/>a<sp/>ball<sp/>in<sp/>the<sp/>middle<sp/>and<sp/>three<sp/>walls</highlight></codeline>
+<codeline><highlight class="normal">around.<sp/><sp/>The<sp/>paddle<sp/>can<sp/>be<sp/>controlled<sp/>by<sp/>keyboard<sp/>presses<sp/>on<sp/>```W(up)```</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>```S(down)```.<sp/>The<sp/>ball<sp/>automatically<sp/>starts<sp/>travelling<sp/>and<sp/>when<sp/>it<sp/>hits<sp/>a<sp/>wall</highlight></codeline>
+<codeline><highlight class="normal">or<sp/>the<sp/>paddle,<sp/>it<sp/>bounces<sp/>and<sp/>accelerates.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>meantime,<sp/>the<sp/>app<sp/>keeps<sp/>track<sp/>of<sp/>the<sp/>player&apos;s<sp/>score<sp/>and<sp/>sends<sp/>related<sp/>messages</highlight></codeline>
+<codeline><highlight class="normal">via<sp/>the<sp/>standard<sp/>text<sp/>output<sp/>device<sp/>(the<sp/>terminal):</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>1<sp/>point<sp/>is<sp/>awarded<sp/>for</highlight></codeline>
+<codeline><highlight class="normal">each<sp/>bounce<sp/>of<sp/>the<sp/>ball<sp/>(wall<sp/>or<sp/>paddle),<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>10<sp/>points<sp/>are<sp/>deducted<sp/>if<sp/>the<sp/>ball<sp/>leaves<sp/>the<sp/>game<sp/>area<sp/>(&quot;goes<sp/>out&quot;<sp/>of<sp/>the<sp/>window<sp/>on<sp/>the<sp/>paddle&apos;s<sp/>side).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>the<sp/>ball<sp/>leaves<sp/>the<sp/>game<sp/>area,<sp/>it<sp/>is<sp/>placed<sp/>back<sp/>in<sp/>the<sp/>center<sp/>and<sp/>its</highlight></codeline>
+<codeline><highlight class="normal">color<sp/>is<sp/>changed.<sp/>The<sp/>app<sp/>pauses<sp/>for<sp/>2<sp/>seconds,<sp/>then<sp/>the<sp/>game<sp/>restarts,</highlight></codeline>
+<codeline><highlight class="normal">with<sp/>the<sp/>ball&apos;s<sp/>travelling<sp/>speed<sp/>reset<sp/>to<sp/>the<sp/>initial<sp/>speed.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>game<sp/>can<sp/>be<sp/>played<sp/>infinitely,<sp/>with<sp/>the<sp/>app<sp/>keeping<sp/>track<sp/>of<sp/>the<sp/>player&apos;s<sp/>score<sp/>in<sp/>the<sp/>terminal.</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>app<sp/>can<sp/>be<sp/>terminated<sp/>by<sp/>pressing<sp/>the<sp/>```Esc```<sp/>key<sp/>or<sp/>closing<sp/>the<sp/>window.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;2.<sp/>Installation<sp/>instructions&lt;/h2&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Depending<sp/>on<sp/>your<sp/>system,<sp/>install<sp/>a<sp/>C++<sp/>compiler<sp/>(macOS<sp/>has<sp/>g++<sp/>built-in<sp/>with<sp/>XCode<sp/>Command<sp/>Line<sp/>Developer<sp/>Tools,<sp/>or<sp/>alternatively<sp/>you<sp/>can<sp/>use<sp/>clang++<sp/>etc.)<sp/>[GCC](https://gcc.gnu.org)<sp/>--<sp/>[Clang](https://clang.llvm.org/get_started.html)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>You<sp/>must<sp/>have<sp/>CMake<sp/>and<sp/>Make<sp/>installed<sp/>to<sp/>be<sp/>able<sp/>to<sp/>build<sp/>the<sp/>app<sp/>from<sp/>source:<sp/>[Cmake<sp/>install](https://cmake.org/install/)<sp/>--<sp/>[GNU<sp/>page<sp/>for<sp/>Make](https://www.gnu.org/software/make/)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>please<sp/>install<sp/>```git```<sp/>if<sp/>you<sp/>don&apos;t<sp/>have<sp/>it<sp/>(macOS<sp/>has<sp/>it<sp/>by<sp/>default):<sp/>[Git<sp/>installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>You<sp/>have<sp/>to<sp/>have<sp/>SDL<sp/>2.0<sp/>installed<sp/>(see<sp/>[SDL&apos;s<sp/>download<sp/>page](https://libsdl.org/download-2.0.php))<sp/>for<sp/>source<sp/>code<sp/>or<sp/>binaries<sp/>for<sp/><sp/>different<sp/>OSes.<sp/>Place<sp/>the<sp/>SDL<sp/>2.0<sp/>files<sp/>somewhere<sp/>where<sp/>your<sp/>compiler<sp/>looks<sp/>for<sp/>third-party<sp/>libraries</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>app<sp/>folder<sp/>is<sp/>set<sp/>up<sp/>to<sp/>use<sp/>```CMake```<sp/>and<sp/>```make```;<sp/>you<sp/>can<sp/>compile<sp/>the<sp/>app<sp/>with<sp/>via<sp/>the<sp/>following<sp/>steps:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>open<sp/>a<sp/>new<sp/>```terminal```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>```cd```<sp/>into<sp/>the<sp/>folder<sp/>where<sp/>you<sp/>would<sp/>like<sp/>to<sp/>clone<sp/>the<sp/>repository</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>run<sp/>```git<sp/>clone<sp/>https://github.com/tamasdinh/Pong-implementation-Cpp```<sp/>-<sp/>this<sp/>will<sp/>download<sp/>the<sp/>whole<sp/>project<sp/>folder<sp/>for<sp/>you<sp/>from<sp/>my<sp/>GitHub<sp/>repository</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>```cd```<sp/>to<sp/>the<sp/>```Pong-implementation-Cpp```<sp/>directory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>run<sp/>```mkdir<sp/>build```<sp/>(or<sp/>whatever<sp/>command<sp/>creates<sp/>a<sp/>directory<sp/>in<sp/>your<sp/>OS)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>run<sp/>```cmake<sp/>..```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>run<sp/>```make```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>the<sp/>executable<sp/>binary<sp/>file<sp/>will<sp/>appear<sp/>in<sp/>the<sp/>```build```<sp/>directory<sp/>(this<sp/>is<sp/>your<sp/>current<sp/>working<sp/>directory).<sp/>You<sp/>can<sp/>run<sp/>the<sp/>app<sp/>by<sp/>running<sp/>```./26_Pong_Cpp```<sp/>in<sp/>the<sp/>terminal.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Play<sp/>in<sp/>the<sp/>game<sp/>window<sp/>and<sp/>read<sp/>the<sp/>messages<sp/>in<sp/>the<sp/>terminal!<sp/>See<sp/>if<sp/>you<sp/>can<sp/>beat<sp/>yourself<sp/>-<sp/>as<sp/>the<sp/>old<sp/>samurai<sp/>saying<sp/>goes:<sp/>```True<sp/>victory<sp/>is<sp/>victory<sp/>over<sp/>the<sp/>self.```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;3.<sp/>App<sp/>structure<sp/>and<sp/>implementation<sp/>logic&lt;/h2&gt;</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>app<sp/>is<sp/>implemented<sp/>in<sp/>an<sp/>object-oriented<sp/>fashion,<sp/>with<sp/>operation</highlight></codeline>
+<codeline><highlight class="normal">factored<sp/>into<sp/>separate<sp/>classes<sp/>with<sp/>an<sp/>efficient<sp/>inheritance<sp/>structure.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>__class<sp/>```PongObject```<sp/>(PongObject.h):__</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Base<sp/>class<sp/>for<sp/>all<sp/>moving<sp/>objects<sp/>(```Paddle```<sp/>and<sp/>```Ball```)<sp/>in<sp/>the<sp/>game.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Implements<sp/>a<sp/>```base<sp/>constructor```.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Encapsulates<sp/>data<sp/>members<sp/>for<sp/>```windowLimit<sp/>(x<sp/>and<sp/>y)```,<sp/>```position<sp/>(x<sp/>and<sp/>y)```,<sp/>```length```,<sp/>```thickness```,<sp/>```color```<sp/>and<sp/>```drawingObject```.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Declares<sp/>and<sp/>defines<sp/>suitable<sp/>```getter```<sp/>and<sp/>```setter```<sp/>functions<sp/>for<sp/>data<sp/>members.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Implements<sp/>```updateDrawingObject```<sp/>and<sp/>```switchColor```<sp/>as<sp/>common<sp/>methods<sp/>for<sp/>```PongObject```<sp/>objects.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>__class<sp/>```Paddle```<sp/>(Paddle.h):__</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Child<sp/>class<sp/>of<sp/>```PongObject```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Declares<sp/>data<sp/>members<sp/>unique<sp/>to<sp/>```Paddle```:<sp/>```paddleDirection```<sp/>and<sp/>```paddleMovingSpeed```<sp/>and<sp/>declares<sp/>and<sp/>defines<sp/>appropriate<sp/>```getter```<sp/>functions<sp/>for<sp/>them<sp/>(setters<sp/>not<sp/>needed)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Overrides<sp/>```base<sp/>constructor```<sp/>in<sp/>```PongObject```<sp/>to<sp/>add<sp/>initialization<sp/>for<sp/>data<sp/>members<sp/>unique<sp/>to<sp/>```Paddle```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Declares<sp/>and<sp/>defines<sp/>```changePaddlePosition```<sp/>method<sp/>(caters<sp/>for<sp/>handling<sp/>paddle<sp/>movements<sp/>based<sp/>on<sp/>user<sp/>input)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>__class<sp/>```Ball```<sp/>(Ball.h):__</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Child<sp/>class<sp/>of<sp/>```PongObject```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Declares<sp/>data<sp/>members<sp/>unique<sp/>to<sp/>```Ball```:<sp/>```startVelocity<sp/>(x<sp/>and<sp/>y)```,<sp/>```velocity<sp/>(x<sp/>and<sp/>y)```,<sp/>```acceleration```<sp/>and<sp/>```hasBounced```<sp/>(getters<sp/>and<sp/>setters<sp/>not<sp/>needed<sp/>as<sp/>they<sp/>are<sp/>catered<sp/>for<sp/>in<sp/>```PongObject```)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Overrides<sp/>```base<sp/>constructor```<sp/>in<sp/>```PongObject```<sp/>to<sp/>add<sp/>initialization<sp/>for<sp/>data<sp/>members<sp/>unique<sp/>to<sp/>```Ball```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Declares<sp/>and<sp/>defines<sp/>```updatePosition```<sp/>method<sp/>(caters<sp/>for<sp/>handling<sp/>ball<sp/>movements,<sp/>including<sp/>bouncing)<sp/>as<sp/>well<sp/>as<sp/>helper<sp/>methods<sp/>```hasBounced```<sp/>(getter<sp/>for<sp/>```hasBounced```<sp/>data<sp/>member),<sp/>```ballOut```<sp/>(signals<sp/>if<sp/>ball<sp/>left<sp/>game<sp/>area)<sp/>and<sp/>```resetVelocity```.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>__class<sp/>```Game```<sp/>(Game.h):__</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Encapsulates<sp/>the<sp/>whole<sp/>logic<sp/>for<sp/>the<sp/>game</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>_public<sp/>methods:_</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>```Initialize()```:<sp/>Initializes<sp/>```SDL```<sp/>graphic<sp/>objects.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>```GameLoop()```:<sp/>executes<sp/>private<sp/>member<sp/>functions<sp/>```ProcessInput()```,<sp/>```UpdateGame()```<sp/>and<sp/>```GenerateOutput()```<sp/>in<sp/>a<sp/>while<sp/>loop<sp/>that<sp/>runs<sp/>until<sp/>the<sp/>```mIsRunning```<sp/>data<sp/>member<sp/>becomes<sp/>```false```.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>```ShutDownGame()```:<sp/>destructs<sp/>previously<sp/>created<sp/>```SDL```<sp/>objects<sp/>and<sp/>terminates<sp/>```SDL```<sp/>session.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>The<sp/>```Game<sp/>Loop```<sp/>is<sp/>implemented<sp/>via<sp/>the<sp/>following<sp/>methods:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>```ProcessInput()```:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Responsible<sp/>for<sp/>handling<sp/>user<sp/>inputs<sp/>during<sp/>the<sp/>game.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Utilizes<sp/>```SDL_event```<sp/>and<sp/>```SDL_GetKeyBoardState()```<sp/>to<sp/>continuously<sp/>query<sp/>for<sp/>user<sp/>inputs<sp/>on<sp/>the<sp/>keyboard.<sp/>Saves<sp/>keyboard<sp/>state<sp/>to<sp/>data<sp/>member<sp/>```state```<sp/>and<sp/>sets<sp/>```mIsRunning```<sp/>to<sp/>```false```<sp/>if<sp/>the<sp/>```Esc```<sp/>key<sp/>is<sp/>pressed,<sp/>thereby<sp/>halting<sp/>the<sp/>```game<sp/>loop```.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>```UpdateGame()```:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Responsible<sp/>for<sp/>updating<sp/>the<sp/>game<sp/>state<sp/>in<sp/>every<sp/>iteration<sp/>of<sp/>the<sp/>```game<sp/>loop```.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Calculates<sp/>```deltaTime```<sp/>-<sp/>time<sp/>passed<sp/>since<sp/>last<sp/>loop,<sp/>and<sp/>also<sp/>caps<sp/>it<sp/>so<sp/>that<sp/>if<sp/>game<sp/>pauses<sp/>no<sp/>&quot;jumps&quot;<sp/>occur</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>updates<sp/>the<sp/>paddle&apos;s<sp/>position<sp/>by<sp/>envoking<sp/>```Paddle::changePaddlePosition()```,<sp/>which<sp/>takes<sp/>inputs<sp/>for<sp/>the<sp/>keyboard<sp/>state<sp/>corresponding<sp/>to<sp/>the<sp/>```&quot;Up&quot;<sp/>key<sp/>(W)```<sp/>and<sp/>the<sp/>```&quot;Down&quot;<sp/>key<sp/>(S)```<sp/>and<sp/>```deltaTime```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>updates<sp/>the<sp/>ball&apos;s<sp/>position<sp/>by<sp/>envoking<sp/>```Ball::updatePosition()```,<sp/>which<sp/>takes<sp/>```deltaTime```<sp/>as<sp/>input<sp/>as<sp/>well<sp/>as<sp/>relevant<sp/>other<sp/>parameters</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>checks<sp/>whether<sp/>the<sp/>ball<sp/>has<sp/>left<sp/>the<sp/>game<sp/>area<sp/>-<sp/>if<sp/>so,<sp/>deducts<sp/>score<sp/>and<sp/>resets<sp/>ball<sp/>state<sp/>to<sp/>the<sp/>center<sp/>(and<sp/>also<sp/>indicates<sp/>via<sp/>a<sp/>data<sp/>member<sp/>that<sp/>the<sp/>ball&apos;s<sp/>color<sp/>has<sp/>to<sp/>be<sp/>changed)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>checks<sp/>whether<sp/>the<sp/>ball<sp/>has<sp/>bounced<sp/>-<sp/>if<sp/>so,<sp/>awards<sp/>a<sp/>point<sp/>and<sp/>outputs<sp/>message<sp/>to<sp/>terminal</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>updates<sp/>the<sp/>```SDL```<sp/>drawing<sp/>objects<sp/>in<sp/>```Paddle```<sp/>and<sp/>```Ball```.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>```GenerateOutput()```:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Responsible<sp/>for<sp/>updating<sp/>graphics,<sp/>based<sp/>on<sp/>the<sp/>updated<sp/>game<sp/>state.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>Redraws<sp/>background,<sp/>walls,<sp/>paddle<sp/>and<sp/>ball<sp/>in<sp/>each<sp/>iteration<sp/>of<sp/>the<sp/>```game<sp/>loop```.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>If<sp/>ball<sp/>recoloring<sp/>need<sp/>was<sp/>indicated,<sp/>switches<sp/>ball<sp/>color<sp/>via<sp/>```Ball::switchColor()```<sp/>(inherited<sp/>from<sp/>```PongObject```)<sp/>and<sp/>makes<sp/>the<sp/>app<sp/>pause<sp/>for<sp/>2<sp/>seconds.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h2&gt;4.<sp/>Methodological<sp/>notes&lt;/h2&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">___NOTE:___<sp/>I<sp/>made<sp/>2<sp/>small<sp/>modifications<sp/>to<sp/>the<sp/>code,<sp/>in<sp/>order<sp/>for<sp/>it<sp/>to<sp/>be<sp/>able<sp/>to<sp/>run<sp/>on<sp/>a<sp/>Linux<sp/>remote<sp/>VM:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>I<sp/>changed<sp/>renderer<sp/>options<sp/>from<sp/>SDL_RENDERER_ACCELERATED<sp/>to<sp/>0<sp/>(system<sp/>chooses)<sp/>as<sp/>the<sp/>Linux<sp/>remote<sp/>machine<sp/>&gt;came<sp/>back<sp/>with<sp/>&quot;Cannot<sp/>find<sp/>suitable<sp/>renderer&quot;<sp/>error</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>I<sp/>commented<sp/>out<sp/>the<sp/>line<sp/>in<sp/>```Game::UpdateGame()```<sp/>in<sp/>which<sp/>I<sp/>am<sp/>guarding<sp/>against<sp/>too<sp/>fast<sp/>execution<sp/>compared<sp/>to<sp/>the<sp/>frame<sp/>rate<sp/>of<sp/>the<sp/>machine.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>two<sp/>changes<sp/>above<sp/>enabled<sp/>the<sp/>remote<sp/>Linux<sp/>VM<sp/>to<sp/>run<sp/>the<sp/>program,<sp/>albeit<sp/>with<sp/>a<sp/>little<sp/>lagging</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>___```Loops,<sp/>function,<sp/>I/O```:___</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>The<sp/>app<sp/>utilizes<sp/>a<sp/>main<sp/>while<sp/>loop<sp/>for<sp/>the<sp/>implementation<sp/>of<sp/>the<sp/>```game<sp/>loop```<sp/>and<sp/>certainly<sp/>there<sp/>are<sp/>a<sp/>number<sp/>of<sp/>```if```<sp/>statements<sp/>governing<sp/>the<sp/>logic<sp/>of<sp/>the<sp/>app.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>User<sp/>input<sp/>(keystrokes<sp/>during<sp/>gameplay)<sp/>is<sp/>handled<sp/>via<sp/>```Game::ProcessInput()```<sp/>as<sp/>part<sp/>of<sp/>the<sp/>main<sp/>```game<sp/>loop```.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>The<sp/>app<sp/>does<sp/>not<sp/>read<sp/>in<sp/>data<sp/>from<sp/>any<sp/>persistent<sp/>data<sp/>sources<sp/>and<sp/>only<sp/>outputs<sp/>non-persistent<sp/>graphics<sp/>and<sp/>text<sp/>via<sp/>the<sp/>output<sp/>device<sp/>(main<sp/>display).</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>___```Object-oriented<sp/>Programming<sp/>(OOP)```:___</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>All<sp/>operations<sp/>are<sp/>encapsulated<sp/>in<sp/>classes<sp/>and<sp/>corresponding<sp/>member<sp/>functions;<sp/>state<sp/>is<sp/>monitored<sp/>via<sp/>data<sp/>members<sp/>of<sp/>the<sp/>respective<sp/>classes.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>I<sp/>used<sp/>inheritance<sp/>between<sp/>the<sp/>```PongObject```<sp/>base<sp/>class<sp/>and<sp/>its<sp/>specific<sp/>children<sp/>```Paddle```<sp/>and<sp/>```Ball```,<sp/>as<sp/>described<sp/>above<sp/>in<sp/>___2.<sp/>App<sp/>structure<sp/>and<sp/>implementation<sp/>logic___</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>```Base<sp/>constructor```<sp/>is<sp/>overriden<sp/>in<sp/>both<sp/>child<sp/>classes<sp/>as<sp/>appropriate;<sp/>I<sp/>didn&apos;t<sp/>see<sp/>a<sp/>need<sp/>for<sp/>any<sp/>further<sp/>application<sp/>of<sp/>polymorphism<sp/>(as<sp/>this<sp/>is<sp/>a<sp/>game<sp/>-<sp/>not<sp/>a<sp/>user<sp/>program<sp/>-,<sp/>there<sp/>is<sp/>no<sp/>user<sp/>who<sp/>would<sp/>want<sp/>to<sp/>e.g.<sp/>call<sp/>a<sp/>function<sp/>differently<sp/>than<sp/>I<sp/>did<sp/>in<sp/>the<sp/>implementation).<sp/>Also,<sp/>```PongObject```<sp/>is<sp/>not<sp/>implemented<sp/>as<sp/>an<sp/>```abstract<sp/>class```<sp/>as<sp/>most<sp/>of<sp/>the<sp/>functionality<sp/>that<sp/>it<sp/>provides<sp/>can<sp/>be<sp/>shared<sp/>(inherited)<sp/>to<sp/>its<sp/>child<sp/>classes.<sp/>As<sp/>such,<sp/>I<sp/>didn&apos;t<sp/>use<sp/>virtual<sp/>functions<sp/>or<sp/>templates.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Member<sp/>initialization<sp/>lists<sp/>are<sp/>utilized<sp/>as<sp/>fully<sp/>as<sp/>possible<sp/>(a<sp/>number<sp/>of<sp/>data<sp/>members<sp/>could<sp/>not<sp/>have<sp/>been<sp/>initialized<sp/>via<sp/>initialization<sp/>lists)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>___```Memory<sp/>management```:___</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>```Game```<sp/>is<sp/>envoked<sp/>on<sp/>the<sp/>stack<sp/>in<sp/>```main```,<sp/>so<sp/>I<sp/>decided<sp/>that<sp/>no<sp/>destructor<sp/>was<sp/>needed.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>```Ball```<sp/>and<sp/>```Paddle```<sp/>are<sp/>initialized<sp/>on<sp/>the<sp/>heap,<sp/>and<sp/>```shared_ptr```s<sp/>pointing<sp/>to<sp/>their<sp/>memory<sp/>addresses<sp/>are<sp/>included<sp/>as<sp/>members<sp/>in<sp/>the<sp/>```Game```<sp/>class.<sp/>As<sp/>such,<sp/>no<sp/>destructors<sp/>for<sp/>these<sp/>classes<sp/>were<sp/>deemed<sp/>necessary<sp/>as<sp/>the<sp/>```shared_ptr```s<sp/>go<sp/>out<sp/>of<sp/>scope<sp/>in<sp/>```main()```<sp/>when<sp/>the<sp/>app<sp/>finished<sp/>running<sp/>and<sp/>with<sp/>that,<sp/>free<sp/>up<sp/>the<sp/>memory<sp/>allocated<sp/>for<sp/>```Ball```<sp/>and<sp/>```Paddle```<sp/>objects.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>```SDL```<sp/>objects<sp/>that<sp/>are<sp/>created,<sp/>are<sp/>destructed<sp/>with<sp/>corresponding<sp/>```SDL```<sp/>methods.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>I<sp/>utilized<sp/>references<sp/>to<sp/>variables<sp/>and<sp/>data<sp/>members<sp/>everywhere<sp/>possible<sp/>to<sp/>avoid<sp/>unnecessarily<sp/>copying<sp/>variables<sp/>between<sp/>functions.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>___```Concurrency```:___</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>```Concurrency```<sp/>was<sp/>not<sp/>used<sp/>explicitly<sp/>in<sp/>the<sp/>program.<sp/>(SDL<sp/>uses<sp/>multithreading<sp/>within<sp/>its<sp/>own<sp/>methods.)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

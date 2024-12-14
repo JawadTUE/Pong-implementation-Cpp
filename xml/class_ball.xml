@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_ball" kind="class" language="C++" prot="public">
+    <compoundname>Ball</compoundname>
+    <basecompoundref refid="class_pong_object" prot="public" virt="non-virtual">PongObject</basecompoundref>
+    <includes refid="_ball_8h" local="no">Ball.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ball_1a086b15c3496fce9b32cbdbcc15cdd9a4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ball::_startVelocityX</definition>
+        <argsstring></argsstring>
+        <name>_startVelocityX</name>
+        <qualifiedname>Ball::_startVelocityX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="26" column="11" bodyfile="Ball.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" compoundref="_ball_8cpp" startline="13" endline="17">resetVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ball_1a2bee614105a77a717d715382308fcf7f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ball::_startVelocityY</definition>
+        <argsstring></argsstring>
+        <name>_startVelocityY</name>
+        <qualifiedname>Ball::_startVelocityY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="27" column="11" bodyfile="Ball.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" compoundref="_ball_8cpp" startline="13" endline="17">resetVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ball_1a1a621bcc9efd81ee9322c66964f3ea8f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ball::_velocityX</definition>
+        <argsstring></argsstring>
+        <name>_velocityX</name>
+        <qualifiedname>Ball::_velocityX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="28" column="11" bodyfile="Ball.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" compoundref="_ball_8cpp" startline="13" endline="17">resetVelocity</referencedby>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">updatePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ball_1a05f41d89618a2560164068d5fad231f5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ball::_velocityY</definition>
+        <argsstring></argsstring>
+        <name>_velocityY</name>
+        <qualifiedname>Ball::_velocityY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="29" column="11" bodyfile="Ball.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" compoundref="_ball_8cpp" startline="13" endline="17">resetVelocity</referencedby>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">updatePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ball_1aee1f00334e64e37660f0ea398f586506" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ball::_acceleration</definition>
+        <argsstring></argsstring>
+        <name>_acceleration</name>
+        <qualifiedname>Ball::_acceleration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="30" column="11" bodyfile="Ball.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">updatePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ball_1a1a1e4213cd8ef18c914aec710ee1b6e5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ball::_hasBounced</definition>
+        <argsstring></argsstring>
+        <name>_hasBounced</name>
+        <qualifiedname>Ball::_hasBounced</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="31" column="10" bodyfile="Ball.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_ball_1a9b59e4011b56c09378451686f39302d7" compoundref="_ball_8cpp" startline="3" endline="3">hasBounced</referencedby>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">updatePosition</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ball_1ac3d1533a6db753193d2e0e2821f0b847" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Ball::Ball</definition>
+        <argsstring>(unsigned short int &amp;windowLimitX, unsigned short int &amp;windowLimitY, unsigned short int &amp;wallThickness, float movingSpeedX, float movingSpeedY)</argsstring>
+        <name>Ball</name>
+        <qualifiedname>Ball::Ball</qualifiedname>
+        <param>
+          <type>unsigned short int &amp;</type>
+          <declname>windowLimitX</declname>
+        </param>
+        <param>
+          <type>unsigned short int &amp;</type>
+          <declname>windowLimitY</declname>
+        </param>
+        <param>
+          <type>unsigned short int &amp;</type>
+          <declname>wallThickness</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>movingSpeedX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>movingSpeedY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="9" column="5" bodyfile="Ball.h" bodystart="9" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ball::updatePosition</definition>
+        <argsstring>(float &amp;deltaTime, unsigned short int &amp;wallThickness, float &amp;paddlePositionY, unsigned short int &amp;paddleLength)</argsstring>
+        <name>updatePosition</name>
+        <qualifiedname>Ball::updatePosition</qualifiedname>
+        <param>
+          <type>float &amp;</type>
+          <declname>deltaTime</declname>
+        </param>
+        <param>
+          <type>unsigned short int &amp;</type>
+          <declname>wallThickness</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>paddlePositionY</declname>
+        </param>
+        <param>
+          <type>unsigned short int &amp;</type>
+          <declname>paddleLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="20" column="10" bodyfile="Ball.cpp" bodystart="19" bodyend="50"/>
+        <references refid="class_ball_1aee1f00334e64e37660f0ea398f586506" compoundref="_ball_8h" startline="30">_acceleration</references>
+        <references refid="class_ball_1a1a1e4213cd8ef18c914aec710ee1b6e5" compoundref="_ball_8h" startline="31">_hasBounced</references>
+        <references refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" compoundref="_pong_object_8h" startline="46">PongObject::_position</references>
+        <references refid="class_ball_1a1a621bcc9efd81ee9322c66964f3ea8f" compoundref="_ball_8h" startline="28">_velocityX</references>
+        <references refid="class_ball_1a05f41d89618a2560164068d5fad231f5" compoundref="_ball_8h" startline="29">_velocityY</references>
+        <references refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" compoundref="_pong_object_8h" startline="44">PongObject::_windowLimitX</references>
+        <references refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" compoundref="_pong_object_8h" startline="45">PongObject::_windowLimitY</references>
+        <references refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" compoundref="_pong_object_8h" startline="10">XYPosition::x</references>
+        <references refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" compoundref="_pong_object_8h" startline="11">XYPosition::y</references>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ball_1a9b59e4011b56c09378451686f39302d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool *</type>
+        <definition>bool * Ball::hasBounced</definition>
+        <argsstring>()</argsstring>
+        <name>hasBounced</name>
+        <qualifiedname>Ball::hasBounced</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="21" column="10" bodyfile="Ball.cpp" bodystart="3" bodyend="3"/>
+        <references refid="class_ball_1a1a1e4213cd8ef18c914aec710ee1b6e5" compoundref="_ball_8h" startline="31">_hasBounced</references>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ball_1ad75211456f2db2abe067871360c8f795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Ball::ballOut</definition>
+        <argsstring>()</argsstring>
+        <name>ballOut</name>
+        <qualifiedname>Ball::ballOut</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="22" column="10" bodyfile="Ball.cpp" bodystart="5" bodyend="11"/>
+        <references refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" compoundref="_pong_object_8h" startline="46">PongObject::_position</references>
+        <references refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" compoundref="_pong_object_8h" startline="44">PongObject::_windowLimitX</references>
+        <references refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" compoundref="_pong_object_8h" startline="45">PongObject::_windowLimitY</references>
+        <references refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" compoundref="_pong_object_8h" startline="10">XYPosition::x</references>
+        <references refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" compoundref="_pong_object_8h" startline="11">XYPosition::y</references>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ball::resetVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>resetVelocity</name>
+        <qualifiedname>Ball::resetVelocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ball.h" line="23" column="10" bodyfile="Ball.cpp" bodystart="13" bodyend="17"/>
+        <references refid="class_ball_1a086b15c3496fce9b32cbdbcc15cdd9a4" compoundref="_ball_8h" startline="26">_startVelocityX</references>
+        <references refid="class_ball_1a2bee614105a77a717d715382308fcf7f" compoundref="_ball_8h" startline="27">_startVelocityY</references>
+        <references refid="class_ball_1a1a621bcc9efd81ee9322c66964f3ea8f" compoundref="_ball_8h" startline="28">_velocityX</references>
+        <references refid="class_ball_1a05f41d89618a2560164068d5fad231f5" compoundref="_ball_8h" startline="29">_velocityY</references>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Ball</label>
+        <link refid="class_ball"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PongObject</label>
+        <link refid="class_pong_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Ball</label>
+        <link refid="class_ball"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_acceleration</edgelabel>
+          <edgelabel>_startVelocityX</edgelabel>
+          <edgelabel>_startVelocityY</edgelabel>
+          <edgelabel>_velocityX</edgelabel>
+          <edgelabel>_velocityY</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>_hasBounced</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PongObject</label>
+        <link refid="class_pong_object"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_length</edgelabel>
+          <edgelabel>_thickness</edgelabel>
+          <edgelabel>_windowLimitX</edgelabel>
+          <edgelabel>_windowLimitY</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_position</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>_color</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>_drawingObject</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SDL_Rect</label>
+      </node>
+      <node id="8">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>XYPosition</label>
+        <link refid="struct_x_y_position"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>bool</label>
+      </node>
+      <node id="5">
+        <label>float</label>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; unsigned short int &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; unsigned short int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>unsigned short int</label>
+      </node>
+    </collaborationgraph>
+    <location file="Ball.h" line="6" column="1" bodyfile="Ball.h" bodystart="7" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_ball_1aee1f00334e64e37660f0ea398f586506" prot="private" virt="non-virtual"><scope>Ball</scope><name>_acceleration</name></member>
+      <member refid="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" prot="protected" virt="non-virtual"><scope>Ball</scope><name>_color</name></member>
+      <member refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" prot="protected" virt="non-virtual"><scope>Ball</scope><name>_drawingObject</name></member>
+      <member refid="class_ball_1a1a1e4213cd8ef18c914aec710ee1b6e5" prot="private" virt="non-virtual"><scope>Ball</scope><name>_hasBounced</name></member>
+      <member refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" prot="protected" virt="non-virtual"><scope>Ball</scope><name>_length</name></member>
+      <member refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" prot="protected" virt="non-virtual"><scope>Ball</scope><name>_position</name></member>
+      <member refid="class_ball_1a086b15c3496fce9b32cbdbcc15cdd9a4" prot="private" virt="non-virtual"><scope>Ball</scope><name>_startVelocityX</name></member>
+      <member refid="class_ball_1a2bee614105a77a717d715382308fcf7f" prot="private" virt="non-virtual"><scope>Ball</scope><name>_startVelocityY</name></member>
+      <member refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" prot="protected" virt="non-virtual"><scope>Ball</scope><name>_thickness</name></member>
+      <member refid="class_ball_1a1a621bcc9efd81ee9322c66964f3ea8f" prot="private" virt="non-virtual"><scope>Ball</scope><name>_velocityX</name></member>
+      <member refid="class_ball_1a05f41d89618a2560164068d5fad231f5" prot="private" virt="non-virtual"><scope>Ball</scope><name>_velocityY</name></member>
+      <member refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" prot="protected" virt="non-virtual"><scope>Ball</scope><name>_windowLimitX</name></member>
+      <member refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" prot="protected" virt="non-virtual"><scope>Ball</scope><name>_windowLimitY</name></member>
+      <member refid="class_ball_1ac3d1533a6db753193d2e0e2821f0b847" prot="public" virt="non-virtual"><scope>Ball</scope><name>Ball</name></member>
+      <member refid="class_ball_1ad75211456f2db2abe067871360c8f795" prot="public" virt="non-virtual"><scope>Ball</scope><name>ballOut</name></member>
+      <member refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" prot="public" virt="non-virtual"><scope>Ball</scope><name>getColor</name></member>
+      <member refid="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" prot="public" virt="non-virtual"><scope>Ball</scope><name>getDrawingObject</name></member>
+      <member refid="class_pong_object_1aa21847fdcfa1d66b9ff4f158a1627c74" prot="public" virt="non-virtual"><scope>Ball</scope><name>getLength</name></member>
+      <member refid="class_pong_object_1abc996c2f1cef3ff6edcbf68ae8bb9bcc" prot="public" virt="non-virtual"><scope>Ball</scope><name>getPosition</name></member>
+      <member refid="class_pong_object_1a4bacb6adfc33add3bfe19a9cb6cb372d" prot="public" virt="non-virtual"><scope>Ball</scope><name>getThickness</name></member>
+      <member refid="class_ball_1a9b59e4011b56c09378451686f39302d7" prot="public" virt="non-virtual"><scope>Ball</scope><name>hasBounced</name></member>
+      <member refid="class_pong_object_1aa14dc04464bdbec58f203e647b74fd36" prot="public" virt="non-virtual"><scope>Ball</scope><name>PongObject</name></member>
+      <member refid="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" prot="public" virt="non-virtual"><scope>Ball</scope><name>resetVelocity</name></member>
+      <member refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" prot="public" virt="non-virtual"><scope>Ball</scope><name>setPosition</name></member>
+      <member refid="class_pong_object_1a6ea5eab6d057ec1fc361dc4ecf0043bc" prot="public" virt="non-virtual"><scope>Ball</scope><name>setWindowLimits</name></member>
+      <member refid="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" prot="public" virt="non-virtual"><scope>Ball</scope><name>switchColor</name></member>
+      <member refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" prot="public" virt="non-virtual"><scope>Ball</scope><name>updateDrawingObject</name></member>
+      <member refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" prot="public" virt="non-virtual"><scope>Ball</scope><name>updatePosition</name></member>
+      <member refid="class_pong_object_1ae8c5d206580bf520f896c0ea2e93af60" prot="public" virt="non-virtual"><scope>Ball</scope><name>~PongObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

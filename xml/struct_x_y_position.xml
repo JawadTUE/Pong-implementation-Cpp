@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_x_y_position" kind="struct" language="C++" prot="public">
+    <compoundname>XYPosition</compoundname>
+    <includes refid="_pong_object_8h" local="no">PongObject.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float XYPosition::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>XYPosition::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="10" column="11" bodyfile="PongObject.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_ball_1ad75211456f2db2abe067871360c8f795" compoundref="_ball_8cpp" startline="5" endline="11">Ball::ballOut</referencedby>
+        <referencedby refid="class_paddle_1aec716565468e77008ea432043aa4e211" compoundref="_paddle_8h" startline="9" endline="14">Paddle::Paddle</referencedby>
+        <referencedby refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" compoundref="_pong_object_8cpp" startline="3" endline="7">PongObject::setPosition</referencedby>
+        <referencedby refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" compoundref="_pong_object_8cpp" startline="17" endline="23">PongObject::updateDrawingObject</referencedby>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">Ball::updatePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float XYPosition::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>XYPosition::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PongObject.h" line="11" column="11" bodyfile="PongObject.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_ball_1ad75211456f2db2abe067871360c8f795" compoundref="_ball_8cpp" startline="5" endline="11">Ball::ballOut</referencedby>
+        <referencedby refid="class_paddle_1a695724f639844634ca2f421a2e858499" compoundref="_paddle_8cpp" startline="3" endline="21">Paddle::changePaddlePosition</referencedby>
+        <referencedby refid="class_paddle_1aec716565468e77008ea432043aa4e211" compoundref="_paddle_8h" startline="9" endline="14">Paddle::Paddle</referencedby>
+        <referencedby refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" compoundref="_pong_object_8cpp" startline="3" endline="7">PongObject::setPosition</referencedby>
+        <referencedby refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" compoundref="_pong_object_8cpp" startline="17" endline="23">PongObject::updateDrawingObject</referencedby>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">Game::UpdateGame</referencedby>
+        <referencedby refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">Ball::updatePosition</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>XYPosition</label>
+        <link refid="struct_x_y_position"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="PongObject.h" line="8" column="1" bodyfile="PongObject.h" bodystart="9" bodyend="12"/>
+    <listofallmembers>
+      <member refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" prot="public" virt="non-virtual"><scope>XYPosition</scope><name>x</name></member>
+      <member refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" prot="public" virt="non-virtual"><scope>XYPosition</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

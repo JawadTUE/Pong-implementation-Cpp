@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_game" kind="class" language="C++" prot="public">
+    <compoundname>Game</compoundname>
+    <includes refid="_game_8h" local="no">Game.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_1a2eb4260096c6438208a539063506af92" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Game::mIsRunning</definition>
+        <argsstring></argsstring>
+        <name>mIsRunning</name>
+        <qualifiedname>Game::mIsRunning</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="20" column="10" bodyfile="Game.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_game_1aaa0ff18388b32b4e6198835a35e000d3" compoundref="_game_8cpp" startline="50" endline="59">GameLoop</referencedby>
+        <referencedby refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" compoundref="_game_8cpp" startline="61" endline="76">ProcessInput</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ad27a2dce7cb5b15de526e0602c368469" prot="private" static="no" mutable="no">
+        <type>SDL_Window *</type>
+        <definition>SDL_Window* Game::mWindow</definition>
+        <argsstring></argsstring>
+        <name>mWindow</name>
+        <qualifiedname>Game::mWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="26" column="16" bodyfile="Game.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_game_1a6d05d838395c9ba3e446e2bab5b82990" compoundref="_game_8cpp" startline="12" endline="41">Initialize</referencedby>
+        <referencedby refid="class_game_1a8adbf6c7f4a90a4f6d604b0097cec72f" compoundref="_game_8cpp" startline="43" endline="48">ShutDownGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a66422f74321ddfe7ee2216c79715fd85" prot="private" static="no" mutable="no">
+        <type>SDL_Renderer *</type>
+        <definition>SDL_Renderer* Game::mRenderer</definition>
+        <argsstring></argsstring>
+        <name>mRenderer</name>
+        <qualifiedname>Game::mRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="27" column="18" bodyfile="Game.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">GenerateOutput</referencedby>
+        <referencedby refid="class_game_1a6d05d838395c9ba3e446e2bab5b82990" compoundref="_game_8cpp" startline="12" endline="41">Initialize</referencedby>
+        <referencedby refid="class_game_1a8adbf6c7f4a90a4f6d604b0097cec72f" compoundref="_game_8cpp" startline="43" endline="48">ShutDownGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a090c8de94387cd343ffb30ba0aa3e926" prot="private" static="no" mutable="no">
+        <type>unsigned short int</type>
+        <definition>unsigned short int Game::_windowSizeX</definition>
+        <argsstring></argsstring>
+        <name>_windowSizeX</name>
+        <qualifiedname>Game::_windowSizeX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="28" column="24" bodyfile="Game.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">GenerateOutput</referencedby>
+        <referencedby refid="class_game_1a6d05d838395c9ba3e446e2bab5b82990" compoundref="_game_8cpp" startline="12" endline="41">Initialize</referencedby>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a0929e103ccd924b40b43bb67a8fb9832" prot="private" static="no" mutable="no">
+        <type>unsigned short int</type>
+        <definition>unsigned short int Game::_windowSizeY</definition>
+        <argsstring></argsstring>
+        <name>_windowSizeY</name>
+        <qualifiedname>Game::_windowSizeY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="29" column="24" bodyfile="Game.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">GenerateOutput</referencedby>
+        <referencedby refid="class_game_1a6d05d838395c9ba3e446e2bab5b82990" compoundref="_game_8cpp" startline="12" endline="41">Initialize</referencedby>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1aa3eae1f45724f2afc9267f5af93b4a3a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Game::_isRightWall</definition>
+        <argsstring></argsstring>
+        <name>_isRightWall</name>
+        <qualifiedname>Game::_isRightWall</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="30" column="10" bodyfile="Game.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">GenerateOutput</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a3d1ac54daef9234ff90e01595a6eee6d" prot="private" static="no" mutable="no">
+        <type>unsigned short int</type>
+        <definition>unsigned short int Game::_wallThickness</definition>
+        <argsstring></argsstring>
+        <name>_wallThickness</name>
+        <qualifiedname>Game::_wallThickness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="31" column="24" bodyfile="Game.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_game_1a9e5cb007f65bf9b667a5573b188887a0" compoundref="_game_8cpp" startline="144" endline="144">getWallThickness</referencedby>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ab71dddeaca87e0ac74b3f41c2305a053" prot="private" static="no" mutable="no">
+        <type>long int</type>
+        <definition>long int Game::_score</definition>
+        <argsstring></argsstring>
+        <name>_score</name>
+        <qualifiedname>Game::_score</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="32" column="14" bodyfile="Game.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a44910b5ea1dbac956a19581539473fa2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Game::_colorSwap</definition>
+        <argsstring></argsstring>
+        <name>_colorSwap</name>
+        <qualifiedname>Game::_colorSwap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="33" column="10" bodyfile="Game.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">GenerateOutput</referencedby>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" prot="private" static="no" mutable="no">
+        <type>const Uint8 *</type>
+        <definition>const Uint8* Game::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>Game::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="37" column="17" bodyfile="Game.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" compoundref="_game_8cpp" startline="61" endline="76">ProcessInput</referencedby>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a63b1531f2d5deedf5c1c1d4517fc3e3e" prot="private" static="no" mutable="no">
+        <type>Uint32</type>
+        <definition>Uint32 Game::mTicksCount</definition>
+        <argsstring></argsstring>
+        <name>mTicksCount</name>
+        <qualifiedname>Game::mTicksCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="39" column="12" bodyfile="Game.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ab2081b760ae45431a902504f41b7e481" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_ball" kindref="compound">Ball</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Ball&gt; Game::ball1</definition>
+        <argsstring></argsstring>
+        <name>ball1</name>
+        <qualifiedname>Game::ball1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="41" column="21" bodyfile="Game.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">GenerateOutput</referencedby>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a36ad77df0f8e64fa9c93165621c819fa" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="class_paddle" kindref="compound">Paddle</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Paddle&gt; Game::paddle1</definition>
+        <argsstring></argsstring>
+        <name>paddle1</name>
+        <qualifiedname>Game::paddle1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="42" column="21" bodyfile="Game.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">GenerateOutput</referencedby>
+        <referencedby refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_1a0c0ca8bed25cf8d1d3eab8f61de773ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game::Game</definition>
+        <argsstring>(unsigned short int windowSizeX, unsigned short int windowSizeY, unsigned short int paddleSize, bool isRightWall)</argsstring>
+        <name>Game</name>
+        <qualifiedname>Game::Game</qualifiedname>
+        <param>
+          <type>unsigned short int</type>
+          <declname>windowSizeX</declname>
+        </param>
+        <param>
+          <type>unsigned short int</type>
+          <declname>windowSizeY</declname>
+        </param>
+        <param>
+          <type>unsigned short int</type>
+          <declname>paddleSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isRightWall</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="14" column="5" bodyfile="Game.cpp" bodystart="3" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a6d05d838395c9ba3e446e2bab5b82990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Game::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>Game::Initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="15" column="10" bodyfile="Game.cpp" bodystart="12" bodyend="41"/>
+        <references refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" compoundref="_game_8h" startline="28">_windowSizeX</references>
+        <references refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" compoundref="_game_8h" startline="29">_windowSizeY</references>
+        <references refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" compoundref="_game_8h" startline="27">mRenderer</references>
+        <references refid="class_game_1ad27a2dce7cb5b15de526e0602c368469" compoundref="_game_8h" startline="26">mWindow</references>
+        <referencedby refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="main_8cpp" startline="3" endline="11">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1aaa0ff18388b32b4e6198835a35e000d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::GameLoop</definition>
+        <argsstring>()</argsstring>
+        <name>GameLoop</name>
+        <qualifiedname>Game::GameLoop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="16" column="10" bodyfile="Game.cpp" bodystart="50" bodyend="59"/>
+        <references refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" compoundref="_game_8cpp" startline="109" endline="142">GenerateOutput</references>
+        <references refid="class_game_1a2eb4260096c6438208a539063506af92" compoundref="_game_8h" startline="20">mIsRunning</references>
+        <references refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" compoundref="_game_8cpp" startline="61" endline="76">ProcessInput</references>
+        <references refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" compoundref="_game_8cpp" startline="78" endline="107">UpdateGame</references>
+        <referencedby refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="main_8cpp" startline="3" endline="11">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a8adbf6c7f4a90a4f6d604b0097cec72f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::ShutDownGame</definition>
+        <argsstring>()</argsstring>
+        <name>ShutDownGame</name>
+        <qualifiedname>Game::ShutDownGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="17" column="10" bodyfile="Game.cpp" bodystart="43" bodyend="48"/>
+        <references refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" compoundref="_game_8h" startline="27">mRenderer</references>
+        <references refid="class_game_1ad27a2dce7cb5b15de526e0602c368469" compoundref="_game_8h" startline="26">mWindow</references>
+        <referencedby refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="main_8cpp" startline="3" endline="11">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_1a770db4782ba58f6e8ae098fccf8ba571" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::ProcessInput</definition>
+        <argsstring>()</argsstring>
+        <name>ProcessInput</name>
+        <qualifiedname>Game::ProcessInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="22" column="10" bodyfile="Game.cpp" bodystart="61" bodyend="76"/>
+        <references refid="class_game_1a2eb4260096c6438208a539063506af92" compoundref="_game_8h" startline="20">mIsRunning</references>
+        <references refid="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" compoundref="_game_8h" startline="37">state</references>
+        <referencedby refid="class_game_1aaa0ff18388b32b4e6198835a35e000d3" compoundref="_game_8cpp" startline="50" endline="59">GameLoop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::UpdateGame</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateGame</name>
+        <qualifiedname>Game::UpdateGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="23" column="10" bodyfile="Game.cpp" bodystart="78" bodyend="107"/>
+        <references refid="class_game_1a44910b5ea1dbac956a19581539473fa2" compoundref="_game_8h" startline="33">_colorSwap</references>
+        <references refid="class_game_1ab71dddeaca87e0ac74b3f41c2305a053" compoundref="_game_8h" startline="32">_score</references>
+        <references refid="class_game_1a3d1ac54daef9234ff90e01595a6eee6d" compoundref="_game_8h" startline="31">_wallThickness</references>
+        <references refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" compoundref="_game_8h" startline="28">_windowSizeX</references>
+        <references refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" compoundref="_game_8h" startline="29">_windowSizeY</references>
+        <references refid="class_game_1ab2081b760ae45431a902504f41b7e481" compoundref="_game_8h" startline="41">ball1</references>
+        <references refid="class_ball_1ad75211456f2db2abe067871360c8f795" compoundref="_ball_8cpp" startline="5" endline="11">Ball::ballOut</references>
+        <references refid="class_paddle_1a695724f639844634ca2f421a2e858499" compoundref="_paddle_8cpp" startline="3" endline="21">Paddle::changePaddlePosition</references>
+        <references refid="class_pong_object_1aa21847fdcfa1d66b9ff4f158a1627c74" compoundref="_pong_object_8cpp" startline="40" endline="40">PongObject::getLength</references>
+        <references refid="class_pong_object_1abc996c2f1cef3ff6edcbf68ae8bb9bcc" compoundref="_pong_object_8cpp" startline="38" endline="38">PongObject::getPosition</references>
+        <references refid="class_ball_1a9b59e4011b56c09378451686f39302d7" compoundref="_ball_8cpp" startline="3" endline="3">Ball::hasBounced</references>
+        <references refid="class_game_1a63b1531f2d5deedf5c1c1d4517fc3e3e" compoundref="_game_8h" startline="39">mTicksCount</references>
+        <references refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" compoundref="_game_8h" startline="42">paddle1</references>
+        <references refid="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" compoundref="_ball_8cpp" startline="13" endline="17">Ball::resetVelocity</references>
+        <references refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" compoundref="_pong_object_8cpp" startline="3" endline="7">PongObject::setPosition</references>
+        <references refid="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" compoundref="_game_8h" startline="37">state</references>
+        <references refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" compoundref="_pong_object_8cpp" startline="17" endline="23">PongObject::updateDrawingObject</references>
+        <references refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" compoundref="_ball_8cpp" startline="19" endline="50">Ball::updatePosition</references>
+        <references refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" compoundref="_pong_object_8h" startline="11">XYPosition::y</references>
+        <referencedby refid="class_game_1aaa0ff18388b32b4e6198835a35e000d3" compoundref="_game_8cpp" startline="50" endline="59">GameLoop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a3163ac2d095e1a5256ba237fb4388c86" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::GenerateOutput</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateOutput</name>
+        <qualifiedname>Game::GenerateOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="24" column="10" bodyfile="Game.cpp" bodystart="109" bodyend="142"/>
+        <references refid="class_game_1a44910b5ea1dbac956a19581539473fa2" compoundref="_game_8h" startline="33">_colorSwap</references>
+        <references refid="class_game_1aa3eae1f45724f2afc9267f5af93b4a3a" compoundref="_game_8h" startline="30">_isRightWall</references>
+        <references refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" compoundref="_game_8h" startline="28">_windowSizeX</references>
+        <references refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" compoundref="_game_8h" startline="29">_windowSizeY</references>
+        <references refid="class_game_1ab2081b760ae45431a902504f41b7e481" compoundref="_game_8h" startline="41">ball1</references>
+        <references refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" compoundref="_pong_object_8cpp" startline="36" endline="36">PongObject::getColor</references>
+        <references refid="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" compoundref="_pong_object_8cpp" startline="15" endline="15">PongObject::getDrawingObject</references>
+        <references refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" compoundref="_game_8h" startline="27">mRenderer</references>
+        <references refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" compoundref="_game_8h" startline="42">paddle1</references>
+        <references refid="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" compoundref="_pong_object_8cpp" startline="25" endline="34">PongObject::switchColor</references>
+        <referencedby refid="class_game_1aaa0ff18388b32b4e6198835a35e000d3" compoundref="_game_8cpp" startline="50" endline="59">GameLoop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a9e5cb007f65bf9b667a5573b188887a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short int *</type>
+        <definition>unsigned short int * Game::getWallThickness</definition>
+        <argsstring>()</argsstring>
+        <name>getWallThickness</name>
+        <qualifiedname>Game::getWallThickness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game.h" line="35" column="24" bodyfile="Game.cpp" bodystart="144" bodyend="144"/>
+        <references refid="class_game_1a3d1ac54daef9234ff90e01595a6eee6d" compoundref="_game_8h" startline="31">_wallThickness</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10">
+        <label>Ball</label>
+        <link refid="class_ball"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>_acceleration</edgelabel>
+          <edgelabel>_startVelocityX</edgelabel>
+          <edgelabel>_startVelocityY</edgelabel>
+          <edgelabel>_velocityX</edgelabel>
+          <edgelabel>_velocityY</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_hasBounced</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Game</label>
+        <link refid="class_game"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_colorSwap</edgelabel>
+          <edgelabel>_isRightWall</edgelabel>
+          <edgelabel>mIsRunning</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mWindow</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>mRenderer</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_wallThickness</edgelabel>
+          <edgelabel>_windowSizeX</edgelabel>
+          <edgelabel>_windowSizeY</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>_score</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>mTicksCount</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>ball1</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>paddle1</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Paddle</label>
+        <link refid="class_paddle"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>_mPaddleDirection</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>_mPaddleMovingSpeed</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>PongObject</label>
+        <link refid="class_pong_object"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_length</edgelabel>
+          <edgelabel>_thickness</edgelabel>
+          <edgelabel>_windowLimitX</edgelabel>
+          <edgelabel>_windowLimitY</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>_position</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>_color</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>_drawingObject</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>SDL_Rect</label>
+      </node>
+      <node id="4">
+        <label>SDL_Renderer *</label>
+      </node>
+      <node id="3">
+        <label>SDL_Window *</label>
+      </node>
+      <node id="16">
+        <label>T</label>
+      </node>
+      <node id="8">
+        <label>Uint32</label>
+      </node>
+      <node id="12">
+        <label>XYPosition</label>
+        <link refid="struct_x_y_position"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bool</label>
+      </node>
+      <node id="7">
+        <label>const Uint8 *</label>
+      </node>
+      <node id="13">
+        <label>float</label>
+      </node>
+      <node id="6">
+        <label>long int</label>
+      </node>
+      <node id="21">
+        <label>short int</label>
+      </node>
+      <node id="18">
+        <label>std::shared_ptr&lt; T &gt;</label>
+        <childnode refid="16" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::shared_ptr&lt; Ball &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="template-instance">
+          <edgelabel>&lt; Ball &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>std::shared_ptr&lt; Paddle &gt;</label>
+        <childnode refid="20" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="template-instance">
+          <edgelabel>&lt; Paddle &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="16" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>std::vector&lt; unsigned short int &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; unsigned short int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>unsigned short int</label>
+      </node>
+    </collaborationgraph>
+    <location file="Game.h" line="11" column="1" bodyfile="Game.h" bodystart="12" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_game_1a44910b5ea1dbac956a19581539473fa2" prot="private" virt="non-virtual"><scope>Game</scope><name>_colorSwap</name></member>
+      <member refid="class_game_1aa3eae1f45724f2afc9267f5af93b4a3a" prot="private" virt="non-virtual"><scope>Game</scope><name>_isRightWall</name></member>
+      <member refid="class_game_1ab71dddeaca87e0ac74b3f41c2305a053" prot="private" virt="non-virtual"><scope>Game</scope><name>_score</name></member>
+      <member refid="class_game_1a3d1ac54daef9234ff90e01595a6eee6d" prot="private" virt="non-virtual"><scope>Game</scope><name>_wallThickness</name></member>
+      <member refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" prot="private" virt="non-virtual"><scope>Game</scope><name>_windowSizeX</name></member>
+      <member refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" prot="private" virt="non-virtual"><scope>Game</scope><name>_windowSizeY</name></member>
+      <member refid="class_game_1ab2081b760ae45431a902504f41b7e481" prot="private" virt="non-virtual"><scope>Game</scope><name>ball1</name></member>
+      <member refid="class_game_1a0c0ca8bed25cf8d1d3eab8f61de773ab" prot="public" virt="non-virtual"><scope>Game</scope><name>Game</name></member>
+      <member refid="class_game_1aaa0ff18388b32b4e6198835a35e000d3" prot="public" virt="non-virtual"><scope>Game</scope><name>GameLoop</name></member>
+      <member refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" prot="private" virt="non-virtual"><scope>Game</scope><name>GenerateOutput</name></member>
+      <member refid="class_game_1a9e5cb007f65bf9b667a5573b188887a0" prot="private" virt="non-virtual"><scope>Game</scope><name>getWallThickness</name></member>
+      <member refid="class_game_1a6d05d838395c9ba3e446e2bab5b82990" prot="public" virt="non-virtual"><scope>Game</scope><name>Initialize</name></member>
+      <member refid="class_game_1a2eb4260096c6438208a539063506af92" prot="private" virt="non-virtual"><scope>Game</scope><name>mIsRunning</name></member>
+      <member refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" prot="private" virt="non-virtual"><scope>Game</scope><name>mRenderer</name></member>
+      <member refid="class_game_1a63b1531f2d5deedf5c1c1d4517fc3e3e" prot="private" virt="non-virtual"><scope>Game</scope><name>mTicksCount</name></member>
+      <member refid="class_game_1ad27a2dce7cb5b15de526e0602c368469" prot="private" virt="non-virtual"><scope>Game</scope><name>mWindow</name></member>
+      <member refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" prot="private" virt="non-virtual"><scope>Game</scope><name>paddle1</name></member>
+      <member refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" prot="private" virt="non-virtual"><scope>Game</scope><name>ProcessInput</name></member>
+      <member refid="class_game_1a8adbf6c7f4a90a4f6d604b0097cec72f" prot="public" virt="non-virtual"><scope>Game</scope><name>ShutDownGame</name></member>
+      <member refid="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" prot="private" virt="non-virtual"><scope>Game</scope><name>state</name></member>
+      <member refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" prot="private" virt="non-virtual"><scope>Game</scope><name>UpdateGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

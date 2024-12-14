@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+  <compound refid="class_ball" kind="class"><name>Ball</name>
+    <member refid="class_ball_1a086b15c3496fce9b32cbdbcc15cdd9a4" kind="variable"><name>_startVelocityX</name></member>
+    <member refid="class_ball_1a2bee614105a77a717d715382308fcf7f" kind="variable"><name>_startVelocityY</name></member>
+    <member refid="class_ball_1a1a621bcc9efd81ee9322c66964f3ea8f" kind="variable"><name>_velocityX</name></member>
+    <member refid="class_ball_1a05f41d89618a2560164068d5fad231f5" kind="variable"><name>_velocityY</name></member>
+    <member refid="class_ball_1aee1f00334e64e37660f0ea398f586506" kind="variable"><name>_acceleration</name></member>
+    <member refid="class_ball_1a1a1e4213cd8ef18c914aec710ee1b6e5" kind="variable"><name>_hasBounced</name></member>
+    <member refid="class_ball_1ac3d1533a6db753193d2e0e2821f0b847" kind="function"><name>Ball</name></member>
+    <member refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" kind="function"><name>updatePosition</name></member>
+    <member refid="class_ball_1a9b59e4011b56c09378451686f39302d7" kind="function"><name>hasBounced</name></member>
+    <member refid="class_ball_1ad75211456f2db2abe067871360c8f795" kind="function"><name>ballOut</name></member>
+    <member refid="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" kind="function"><name>resetVelocity</name></member>
+  </compound>
+  <compound refid="class_game" kind="class"><name>Game</name>
+    <member refid="class_game_1a2eb4260096c6438208a539063506af92" kind="variable"><name>mIsRunning</name></member>
+    <member refid="class_game_1ad27a2dce7cb5b15de526e0602c368469" kind="variable"><name>mWindow</name></member>
+    <member refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kind="variable"><name>mRenderer</name></member>
+    <member refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" kind="variable"><name>_windowSizeX</name></member>
+    <member refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" kind="variable"><name>_windowSizeY</name></member>
+    <member refid="class_game_1aa3eae1f45724f2afc9267f5af93b4a3a" kind="variable"><name>_isRightWall</name></member>
+    <member refid="class_game_1a3d1ac54daef9234ff90e01595a6eee6d" kind="variable"><name>_wallThickness</name></member>
+    <member refid="class_game_1ab71dddeaca87e0ac74b3f41c2305a053" kind="variable"><name>_score</name></member>
+    <member refid="class_game_1a44910b5ea1dbac956a19581539473fa2" kind="variable"><name>_colorSwap</name></member>
+    <member refid="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" kind="variable"><name>state</name></member>
+    <member refid="class_game_1a63b1531f2d5deedf5c1c1d4517fc3e3e" kind="variable"><name>mTicksCount</name></member>
+    <member refid="class_game_1ab2081b760ae45431a902504f41b7e481" kind="variable"><name>ball1</name></member>
+    <member refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" kind="variable"><name>paddle1</name></member>
+    <member refid="class_game_1a0c0ca8bed25cf8d1d3eab8f61de773ab" kind="function"><name>Game</name></member>
+    <member refid="class_game_1a6d05d838395c9ba3e446e2bab5b82990" kind="function"><name>Initialize</name></member>
+    <member refid="class_game_1aaa0ff18388b32b4e6198835a35e000d3" kind="function"><name>GameLoop</name></member>
+    <member refid="class_game_1a8adbf6c7f4a90a4f6d604b0097cec72f" kind="function"><name>ShutDownGame</name></member>
+    <member refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" kind="function"><name>ProcessInput</name></member>
+    <member refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" kind="function"><name>UpdateGame</name></member>
+    <member refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" kind="function"><name>GenerateOutput</name></member>
+    <member refid="class_game_1a9e5cb007f65bf9b667a5573b188887a0" kind="function"><name>getWallThickness</name></member>
+  </compound>
+  <compound refid="class_paddle" kind="class"><name>Paddle</name>
+    <member refid="class_paddle_1a19ba8eccb935d72d7fb6f116da4b55b5" kind="variable"><name>_mPaddleDirection</name></member>
+    <member refid="class_paddle_1aa1decb5e97f47790efa8cd67226ebabc" kind="variable"><name>_mPaddleMovingSpeed</name></member>
+    <member refid="class_paddle_1aec716565468e77008ea432043aa4e211" kind="function"><name>Paddle</name></member>
+    <member refid="class_paddle_1a695724f639844634ca2f421a2e858499" kind="function"><name>changePaddlePosition</name></member>
+    <member refid="class_paddle_1ad646734121d992e82335d51b6b27c8b3" kind="function"><name>getPaddleDirection</name></member>
+    <member refid="class_paddle_1a8ca1e1c426d48134b921cada983c4a6c" kind="function"><name>getPaddleMovingSpeed</name></member>
+  </compound>
+  <compound refid="class_pong_object" kind="class"><name>PongObject</name>
+    <member refid="class_pong_object_1a6528e2654ea7e61821c2bddc703290a0" kind="variable"><name>_windowLimitX</name></member>
+    <member refid="class_pong_object_1ad6a29e5ce8a4b8f500c3c2e4ba083ebd" kind="variable"><name>_windowLimitY</name></member>
+    <member refid="class_pong_object_1af3b432714b4620c1da526a0dcc3469c3" kind="variable"><name>_position</name></member>
+    <member refid="class_pong_object_1aa22575769ad9bacfb339107ec2c6153e" kind="variable"><name>_length</name></member>
+    <member refid="class_pong_object_1ac70ff384026c7fc2e50cd3b51a7d3fd8" kind="variable"><name>_thickness</name></member>
+    <member refid="class_pong_object_1ae1a2319d1b86464562a898a728fb6de8" kind="variable"><name>_color</name></member>
+    <member refid="class_pong_object_1abed4b7dfc8464ec8c36293d260a4d757" kind="variable"><name>_drawingObject</name></member>
+    <member refid="class_pong_object_1aa14dc04464bdbec58f203e647b74fd36" kind="function"><name>PongObject</name></member>
+    <member refid="class_pong_object_1ae8c5d206580bf520f896c0ea2e93af60" kind="function"><name>~PongObject</name></member>
+    <member refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" kind="function"><name>updateDrawingObject</name></member>
+    <member refid="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" kind="function"><name>switchColor</name></member>
+    <member refid="class_pong_object_1abc996c2f1cef3ff6edcbf68ae8bb9bcc" kind="function"><name>getPosition</name></member>
+    <member refid="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" kind="function"><name>getDrawingObject</name></member>
+    <member refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" kind="function"><name>getColor</name></member>
+    <member refid="class_pong_object_1aa21847fdcfa1d66b9ff4f158a1627c74" kind="function"><name>getLength</name></member>
+    <member refid="class_pong_object_1a4bacb6adfc33add3bfe19a9cb6cb372d" kind="function"><name>getThickness</name></member>
+    <member refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" kind="function"><name>setPosition</name></member>
+    <member refid="class_pong_object_1a6ea5eab6d057ec1fc361dc4ecf0043bc" kind="function"><name>setWindowLimits</name></member>
+  </compound>
+  <compound refid="struct_x_y_position" kind="struct"><name>XYPosition</name>
+    <member refid="struct_x_y_position_1a97a8d0dffb7dfcd4e82c00ca03d3ce3e" kind="variable"><name>x</name></member>
+    <member refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" kind="variable"><name>y</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_ball_8cpp" kind="file"><name>Ball.cpp</name>
+  </compound>
+  <compound refid="_ball_8h" kind="file"><name>Ball.h</name>
+  </compound>
+  <compound refid="_game_8cpp" kind="file"><name>Game.cpp</name>
+  </compound>
+  <compound refid="_game_8h" kind="file"><name>Game.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_paddle_8cpp" kind="file"><name>Paddle.cpp</name>
+  </compound>
+  <compound refid="_paddle_8h" kind="file"><name>Paddle.h</name>
+  </compound>
+  <compound refid="_pong_object_8cpp" kind="file"><name>PongObject.cpp</name>
+  </compound>
+  <compound refid="_pong_object_8h" kind="file"><name>PongObject.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+</doxygenindex>

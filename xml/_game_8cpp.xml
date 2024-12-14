@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_game_8cpp" kind="file" language="C++">
+    <compoundname>Game.cpp</compoundname>
+    <includes refid="_game_8h" local="yes">Game.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>Ball.h</label>
+        <link refid="_ball_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Paddle.h</label>
+        <link refid="_paddle_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PongObject.h</label>
+        <link refid="_pong_object_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SDL2/SDL.h</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>memory</label>
+      </node>
+      <node id="9">
+        <label>random</label>
+      </node>
+      <node id="5">
+        <label>thread</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_game_8h" kindref="compound">Game.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_game_1a0c0ca8bed25cf8d1d3eab8f61de773ab" refkind="member"><highlight class="normal"><ref refid="class_game_1a0c0ca8bed25cf8d1d3eab8f61de773ab" kindref="member">Game::Game</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>windowSizeX,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>windowSizeY,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>paddleSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isRightWall)<sp/>:<sp/>_windowSizeX(windowSizeX),</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_windowSizeY(windowSizeY),</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_isRightWall(isRightWall),</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_wallThickness(15),</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_score(0),</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_colorSwap(false),</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ball1(new<sp/><ref refid="class_ball" kindref="compound">Ball</ref>(windowSizeX,<sp/>windowSizeY,<sp/>_wallThickness,<sp/>200.0f,<sp/>250.0f)),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>paddle1(new<sp/><ref refid="class_paddle" kindref="compound">Paddle</ref>(windowSizeX,<sp/>windowSizeY,<sp/>_wallThickness,<sp/>300.0f,<sp/>paddleSize))<sp/>{};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_game_1a6d05d838395c9ba3e446e2bab5b82990" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_game_1a6d05d838395c9ba3e446e2bab5b82990" kindref="member">Game::Initialize</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sdlInitializeResult<sp/>=<sp/>SDL_Init(SDL_INIT_VIDEO);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sdlInitializeResult<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Log(</highlight><highlight class="stringliteral">&quot;Have<sp/>not<sp/>been<sp/>able<sp/>to<sp/>initialize<sp/>SDL;<sp/>error<sp/>message:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>SDL_GetError());</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1ad27a2dce7cb5b15de526e0602c368469" kindref="member">mWindow</ref><sp/>=<sp/>SDL_CreateWindow(</highlight><highlight class="stringliteral">&quot;Pong<sp/>in<sp/>C++<sp/>-<sp/>by<sp/>Tamas<sp/>Dinh&quot;</highlight><highlight class="normal">,<sp/>300,<sp/>100,<sp/><ref refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" kindref="member">_windowSizeX</ref>,<sp/><ref refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" kindref="member">_windowSizeY</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_game_1ad27a2dce7cb5b15de526e0602c368469" kindref="member">mWindow</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Log(</highlight><highlight class="stringliteral">&quot;Game<sp/>window<sp/>initialization<sp/>failed!<sp/>Error<sp/>message:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>SDL_GetError());</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref><sp/>=<sp/>SDL_CreateRenderer(<ref refid="class_game_1ad27a2dce7cb5b15de526e0602c368469" kindref="member">mWindow</ref>,<sp/>-1,<sp/>0);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Log(</highlight><highlight class="stringliteral">&quot;Game<sp/>renderer<sp/>initialization<sp/>failed!<sp/>Error<sp/>message:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>SDL_GetError());</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_SetRenderDrawColor(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/>0,<sp/>0,<sp/>0,<sp/>255);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderClear(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderPresent(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_game_1a8adbf6c7f4a90a4f6d604b0097cec72f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_1a8adbf6c7f4a90a4f6d604b0097cec72f" kindref="member">Game::ShutDownGame</ref>()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_DestroyWindow(<ref refid="class_game_1ad27a2dce7cb5b15de526e0602c368469" kindref="member">mWindow</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_DestroyRenderer(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Quit();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_game_1aaa0ff18388b32b4e6198835a35e000d3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_1aaa0ff18388b32b4e6198835a35e000d3" kindref="member">Game::GameLoop</ref>()</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="class_game_1a2eb4260096c6438208a539063506af92" kindref="member">mIsRunning</ref>)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" kindref="member">ProcessInput</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" kindref="member">UpdateGame</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" kindref="member">GenerateOutput</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_1a770db4782ba58f6e8ae098fccf8ba571" kindref="member">Game::ProcessInput</ref>()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Event<sp/>event;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(SDL_PollEvent(&amp;event))</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(event.type)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDL_QUIT:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1a2eb4260096c6438208a539063506af92" kindref="member">mIsRunning</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" kindref="member">state</ref><sp/>=<sp/>SDL_GetKeyboardState(NULL);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" kindref="member">state</ref>[SDL_SCANCODE_ESCAPE])</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1a2eb4260096c6438208a539063506af92" kindref="member">mIsRunning</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_1af7c8b9e9b190f9fa165fe13a9b07131c" kindref="member">Game::UpdateGame</ref>()</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime<sp/>=<sp/>(SDL_GetTicks()<sp/>-<sp/><ref refid="class_game_1a63b1531f2d5deedf5c1c1d4517fc3e3e" kindref="member">mTicksCount</ref>)<sp/>/<sp/>1000.0f;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1a63b1531f2d5deedf5c1c1d4517fc3e3e" kindref="member">mTicksCount</ref><sp/>=<sp/>SDL_GetTicks();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(deltaTime<sp/>&gt;<sp/>0.05f)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deltaTime<sp/>=<sp/>0.05f;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" kindref="member">paddle1</ref>-&gt;<ref refid="class_paddle_1a695724f639844634ca2f421a2e858499" kindref="member">changePaddlePosition</ref>(<ref refid="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" kindref="member">state</ref>[SDL_SCANCODE_W],<sp/><ref refid="class_game_1a59398a44df2cd5371c7ab3ea3fa033e1" kindref="member">state</ref>[SDL_SCANCODE_S],<sp/>deltaTime);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_ball_1aaa466d7645fc79b859b9cd17a880be9d" kindref="member">updatePosition</ref>(deltaTime,<sp/><ref refid="class_game_1a3d1ac54daef9234ff90e01595a6eee6d" kindref="member">_wallThickness</ref>,<sp/><ref refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" kindref="member">paddle1</ref>-&gt;<ref refid="class_pong_object_1abc996c2f1cef3ff6edcbf68ae8bb9bcc" kindref="member">getPosition</ref>()-&gt;<ref refid="struct_x_y_position_1a1b0abc1fd8b7d87c4a4e1f713aa165e5" kindref="member">y</ref>,<sp/>*(<ref refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" kindref="member">paddle1</ref>-&gt;<ref refid="class_pong_object_1aa21847fdcfa1d66b9ff4f158a1627c74" kindref="member">getLength</ref>()));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_ball_1ad75211456f2db2abe067871360c8f795" kindref="member">ballOut</ref>())</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1ab71dddeaca87e0ac74b3f41c2305a053" kindref="member">_score</ref><sp/>-=<sp/>10;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nBALL<sp/>OUT!!!<sp/>Score<sp/>decremented<sp/>by<sp/>10pts<sp/>--&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>SCORE:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="class_game_1ab71dddeaca87e0ac74b3f41c2305a053" kindref="member">_score</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_pong_object_1ae99288d4ba0092aa823adf5451937097" kindref="member">setPosition</ref>(<ref refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" kindref="member">_windowSizeX</ref><sp/>/<sp/>2,<sp/><ref refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" kindref="member">_windowSizeY</ref><sp/>/<sp/>2);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_ball_1ac28f6acb1b2f7823a9a76f0e43b51dbd" kindref="member">resetVelocity</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1a44910b5ea1dbac956a19581539473fa2" kindref="member">_colorSwap</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*(<ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_ball_1a9b59e4011b56c09378451686f39302d7" kindref="member">hasBounced</ref>()))</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1ab71dddeaca87e0ac74b3f41c2305a053" kindref="member">_score</ref><sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;BOUNCE!!!<sp/>Score<sp/>incremented<sp/>by<sp/>1pts<sp/>--&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>SCORE:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="class_game_1ab71dddeaca87e0ac74b3f41c2305a053" kindref="member">_score</ref><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" kindref="member">paddle1</ref>-&gt;<ref refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" kindref="member">updateDrawingObject</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_pong_object_1a885c8b493106caaa5149a523b346ed8e" kindref="member">updateDrawingObject</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_1a3163ac2d095e1a5256ba237fb4388c86" kindref="member">Game::GenerateOutput</ref>()</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_SetRenderDrawColor(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/>0,<sp/>0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderClear(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>thickness<sp/>=<sp/>15;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_SetRenderDrawColor(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/>255,<sp/>255,<sp/>255,<sp/>255);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect<sp/>wallTop{0,<sp/>0,<sp/><ref refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" kindref="member">_windowSizeX</ref>,<sp/>thickness};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderFillRect(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/>&amp;wallTop);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Rect<sp/>wallBottom{0,<sp/><ref refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" kindref="member">_windowSizeY</ref><sp/>-<sp/>thickness,<sp/><ref refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" kindref="member">_windowSizeX</ref>,<sp/>thickness};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderFillRect(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/>&amp;wallBottom);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_game_1aa3eae1f45724f2afc9267f5af93b4a3a" kindref="member">_isRightWall</ref>)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Rect<sp/>wallRight{<ref refid="class_game_1a090c8de94387cd343ffb30ba0aa3e926" kindref="member">_windowSizeX</ref><sp/>-<sp/>thickness,<sp/>0,<sp/>thickness,<sp/><ref refid="class_game_1a0929e103ccd924b40b43bb67a8fb9832" kindref="member">_windowSizeY</ref>};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_RenderFillRect(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/>&amp;wallRight);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderFillRect(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/><ref refid="class_game_1a36ad77df0f8e64fa9c93165621c819fa" kindref="member">paddle1</ref>-&gt;<ref refid="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" kindref="member">getDrawingObject</ref>());</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_game_1a44910b5ea1dbac956a19581539473fa2" kindref="member">_colorSwap</ref>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_pong_object_1ac14d01085d5d88f1e4a79eae8c90271d" kindref="member">switchColor</ref>();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_SetRenderDrawColor(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" kindref="member">getColor</ref>()[0],<sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" kindref="member">getColor</ref>()[1],<sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_pong_object_1aefe6fdcb11cb5f2d46c944614cc15366" kindref="member">getColor</ref>()[2],<sp/>255);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderFillRect(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>,<sp/><ref refid="class_game_1ab2081b760ae45431a902504f41b7e481" kindref="member">ball1</ref>-&gt;<ref refid="class_pong_object_1a1c623c967308f45731d6dce8b994b5ed" kindref="member">getDrawingObject</ref>());</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_RenderPresent(<ref refid="class_game_1a66422f74321ddfe7ee2216c79715fd85" kindref="member">mRenderer</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_game_1a44910b5ea1dbac956a19581539473fa2" kindref="member">_colorSwap</ref>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::sleep_for(std::chrono::milliseconds(2000));</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_1a44910b5ea1dbac956a19581539473fa2" kindref="member">_colorSwap</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_game_1a9e5cb007f65bf9b667a5573b188887a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="class_game_1a9e5cb007f65bf9b667a5573b188887a0" kindref="member">Game::getWallThickness</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="class_game_1a3d1ac54daef9234ff90e01595a6eee6d" kindref="member">_wallThickness</ref>;<sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="Game.cpp"/>
+  </compounddef>
+</doxygen>
