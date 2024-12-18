@@ -1,3 +1,7 @@
+<div style="border: 1px solid red; padding: 10px; background-color:rgb(221, 190, 190); color: red;">
+<strong>Note:</strong> This repository is a fork. All docstrings in this repository are AI-generated as part of a thesis.
+</div>
+
 <h1>Pong game implementation in C++</h1>
 
 <h2>1. Game overview</h2>

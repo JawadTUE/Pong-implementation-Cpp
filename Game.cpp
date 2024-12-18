@@ -1,5 +1,11 @@
 #include "Game.h"
 
+/*!
+Initializes the game with specified window dimensions, paddle size, and wall configuration.
+Sets up the initial game state, including score and wall thickness.
+Creates Ball and Paddle objects with predefined parameters, positioning them within the game window.
+Prepares the game for start by initializing all necessary components and settings.
+*/
 Game::Game(unsigned short int windowSizeX, unsigned short int windowSizeY, unsigned short int paddleSize, bool isRightWall) : _windowSizeX(windowSizeX),
                                                                                                                               _windowSizeY(windowSizeY),
                                                                                                                               _isRightWall(isRightWall),
@@ -9,6 +15,12 @@ Game::Game(unsigned short int windowSizeX, unsigned short int windowSizeY, unsig
                                                                                                                               ball1(new Ball(windowSizeX, windowSizeY, _wallThickness, 200.0f, 250.0f)),
                                                                                                                               paddle1(new Paddle(windowSizeX, windowSizeY, _wallThickness, 300.0f, paddleSize)) {};
 
+/*!
+Initializes the game's graphical components using SDL.
+Sets up the video subsystem, creates the game window, and initializes the renderer.
+Handles initialization errors by logging them.
+Returns true if successful, false otherwise, allowing the main function to proceed with the game loop or terminate if initialization fails.
+*/
 bool Game::Initialize()
 {
     int sdlInitializeResult = SDL_Init(SDL_INIT_VIDEO);
@@ -40,6 +52,11 @@ bool Game::Initialize()
     return true;
 }
 
+/*!
+Performs cleanup operations to shut down the game.
+Destroys the SDL window and renderer, and terminates the SDL subsystem.
+This function ensures proper resource management and a clean exit of the game, preventing memory leaks and other potential issues.
+*/
 void Game::ShutDownGame()
 {
     SDL_DestroyWindow(mWindow);
@@ -47,6 +64,10 @@ void Game::ShutDownGame()
     SDL_Quit();
 }
 
+/*!
+Executes the main game loop, continuously processing input, updating game state, and rendering output.
+This function runs until the game is terminated, calling ProcessInput, UpdateGame, and GenerateOutput in each iteration to maintain gameplay flow and responsiveness.
+*/
 void Game::GameLoop()
 {
 
@@ -58,6 +79,11 @@ void Game::GameLoop()
     }
 }
 
+/*!
+Handles user input and system events using SDL.
+Processes quit events and captures the current keyboard state, specifically checking for the escape key to exit the game.
+Updates the game's running state based on these inputs, allowing for responsive user interaction and game control.
+*/
 void Game::ProcessInput()
 {
     SDL_Event event;
@@ -75,6 +101,11 @@ void Game::ProcessInput()
         mIsRunning = false;
 }
 
+/*!
+Updates the game state for each frame.
+Calculates frame time, updates paddle and ball positions, checks for collisions and out-of-bounds conditions, and manages scoring.
+Handles ball reset when out of bounds, updates visual representations of game objects, and ensures game progression based on player actions and game events.
+*/
 void Game::UpdateGame()
 {
 
@@ -106,6 +137,12 @@ void Game::UpdateGame()
     ball1->updateDrawingObject();
 }
 
+/*!
+Renders the current game state to the screen using SDL.
+Clears the previous frame, draws game elements (walls, paddle, ball) with appropriate colors and positions.
+Handles visual effects like ball color swapping when triggered.
+Ensures the display accurately reflects the current game state, providing smooth and responsive graphics.
+*/
 void Game::GenerateOutput()
 {
 
@@ -141,4 +178,8 @@ void Game::GenerateOutput()
     }
 }
 
+/*!
+Returns a pointer to the wall thickness value, which is used for rendering game boundaries and collision detection.
+This accessor method allows other parts of the game to reference the wall thickness for consistent gameplay mechanics.
+*/
 unsigned short int *Game::getWallThickness() { return &_wallThickness; }
